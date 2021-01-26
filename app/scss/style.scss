@@ -1,9 +1,19 @@
-html{
-  box-sizing: border-box;
+@import 'vars';
+@import 'global';
+@import 'fonts';
+
+
+.header__top-inner{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+
 }
-*, *::before, *::after{
-  box-sizing: inherit;
+.header__top{
+  background-color: #eef1f3;
 }
-body{
-  background-color: orange;
+.header__bottom{
+  height: 80px;
+  background-color: #fff;
 }

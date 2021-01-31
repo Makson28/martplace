@@ -2,8 +2,9 @@ html {
   box-sizing: border-box;
 }
 
-*,*::before,
-*::after { 
+*,
+*::before,
+*::after {
   box-sizing: inherit;
 }
 
@@ -13,18 +14,22 @@ a {
   color: #000;
 }
 
-ul, 
+ul,
 li {
   margin: 0;
   padding: 0;
   list-style: none;
 }
+
 body {
-  font-family: 'Quicksand', sans-serif;
+  font-family: "Quicksand";
   font-weight: 400;
+  font-size: 15px;
   overflow-x: hidden;
+  line-height: 28px;
 }
-.container{
+
+.container {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;

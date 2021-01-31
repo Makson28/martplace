@@ -2,11 +2,11 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MartPlace</title>
-  <link rel="stylesheet" href="css/style.min.css">
-  <link rel="stylesheet" href="css/libs.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/libs.min.css" />
 </head>
 
 <body>
@@ -15,41 +15,90 @@
       <div class="container">
         <div class="header__top-inner">
           <div class="header__logo">
-            <a href="#">
-              <img src="images/header-logo.png" alt="">
-              <img src="images/header-martplace.png" alt="">
+            <a href="#" class="logo--m">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px"
+                height="50px">
+                <image x="0px" y="0px" width="50px" height="50px"
+                  xlink:href="data:img/png;base64,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" />
+              </svg>
+              <a href="#" class="logo--martplace black">Mart<span class="blue">Place</span></a>
             </a>
           </div>
-          <div class="header__box-seller">
-            <a href="#" class="header__btn-seller">Become a Seller</a>
-          </div>
           <div class="header__box">
-            <a href="#" class="header__btn">Login</a>
-            <a href="#" class="header__btn">Register</a>
+            <a href="#" class="header__btn-seller">Become a Seller</a>
+            <div class="notification">
+              <a href="#" class="notification__icons alarm">
+                <img src="./images/alarm.png" alt="alarm">
+                <span>25</span>
+              </a>
+              <a href="#" class="notification__icons envelope">
+                <img src="./images/envelope.png" alt="envelope">
+                <span>6</span>
+              </a>
+              <a href="#" class="notification__icons cart">
+                <img src="./images/cart.png" alt="cart">
+                <span>2</span>
+              </a>
+            </div>
+            <div class="user">
+              <div class="user__img">
+                <img src="./images/user.png" alt="user avatar">
+              </div>
+              <div class="user__info">
+                <div class="user__name">
+                  Taofiq Hakim
+                </div>
+                <div class="user__money">
+                  $20.45
+                </div>
+              </div>
+            </div>
+            <a href="#" class="header__btn header__btn--login">Login</a>
+            <a href="#" class="header__btn header__btn--register">Register</a>
           </div>
         </div>
       </div>
     </div>
     <div class="header__bottom">
       <div class="container">
-        <ul class="menu__list">
-          <li><a href="#">Home</a></li>
-          <li><a href="#">All products</a></li>
-          <li><a href="#">Wordpress</a></li>
-          <li><a href="#">Festures</a></li>
-          <li><a href="#">Pages</a></li>
-        </ul>
-      </div>
-      <div class="search">
+        <div class="header__bottom-inner">
+          <nav class="menu">
+            <ul class="menu__list">
+              <li>
+                <a href="#">Home</a>
+              </li>
+              <li>
+                <a href="#">All products</a>
+              </li>
+              <li>
+                <a href="#">Wordpress</a>
+              </li>
+              <li>
+                <a href="#">Festures</a>
+              </li>
+              <li>
+                <a href="#">Pages</a>
+              </li>
+            </ul>
 
+            <div class="search">
+              <form>
+                <input type="text" placeholder="Search product here..." required>
+                <button type="submit">
+                </button>
+              </form>
+            </div>
+          </nav>
+        </div>
       </div>
     </div>
   </header>
 
+  
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="js/lib.min.js"></script>
-  <script src="js/main.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

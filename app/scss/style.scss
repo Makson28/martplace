@@ -18,7 +18,6 @@
   margin-left: 4px;
   font-weight: 700;
   font-size: 30px;
-  line-height: 28px;
 }
 
 .black {
@@ -39,7 +38,7 @@
 
 .header__btn-seller {
   background-color: $blue;
-  color: #ffffff;
+  color: $white;
   font-size: 14px;
   padding: 4px;
   border-radius: 18px;
@@ -48,7 +47,7 @@
 }
 
 .header__btn {
-  color: #ffffff;
+  color: $white;
   font-size: 14px;
   padding: 4px;
   width: 72px;
@@ -199,7 +198,7 @@ li {
       right: -15px;
       font-weight: 500;
       font-size: 14px;
-      color: #ffffff;
+      color: $white;
     }
   }
 }
@@ -236,7 +235,8 @@ li {
   display: flex;
   justify-content: center;
   a {
-    color: #ffffff;
+    transition: all 0.5s;
+    color: $white;
     font-size: 16px;
     border-style: solid;
     border-width: 1px;
@@ -249,7 +249,7 @@ li {
   }
   a:hover {
     color: $blue;
-    background-color: #ffffff;
+    background-color: $white;
   }
 }
 
@@ -365,7 +365,7 @@ li {
 }
 
 .description {
-  background-color: #ffffff;
+  background-color: $white;
   margin: 186px 0 120px 0;
   &__inner {
     display: flex;
@@ -402,7 +402,7 @@ li {
   padding-bottom: 120px;
   &__panel,
   .panel {
-    background-color: #ffffff;
+    background-color: $white;
     border-radius: 4px;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
     display: flex;
@@ -427,7 +427,7 @@ li {
   }
   .tag:hover {
     background-color: $blue;
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -498,7 +498,7 @@ li {
   &__description {
     padding-left: 50px;
     padding-right: 60px;
-    background-color: #ffffff;
+    background-color: $white;
     border-top-right-radius: 5px;
     border-bottom-right-radius: 5px;
     box-shadow: 0px 2px 30px 0px rgba(147, 155, 168, 0.1);
@@ -560,7 +560,7 @@ li {
     margin-top: 22px;
   }
   &__price {
-    color: #ffffff;
+    color: $white;
     background-color: $blue;
     padding: 0 18px 0 18px;
     border-radius: 15px;
@@ -628,7 +628,7 @@ li {
 .filter__panel {
   margin: 30px 0 50px 0;
   border-radius: 4px;
-  background-color: #ffffff;
+  background-color: $white;
   box-shadow: 0px 1px 2px 0px rgba(90, 93, 100, 0.1);
   &-btn {
     padding: 30px;
@@ -642,7 +642,7 @@ li {
   }
   .mixitup-control-active {
     background-color: $blue;
-    color: #ffffff;
+    color: $white;
   }
 }
 
@@ -656,7 +656,7 @@ li {
     margin-bottom: 30px;
     max-width: 360px;
     border-radius: 4px;
-    background-color: #ffffff;
+    background-color: $white;
     box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
     &-img {
       width: 360px;
@@ -667,11 +667,11 @@ li {
         display: none;
         &__info {
           font-weight: 500;
-          color: #ffffff;
+          color: $white;
           line-height: 0;
           padding: 22px 30px 22px 30px;
           border-radius: 25px;
-          border-color: #ffffff;
+          border-color: $white;
           border-style: solid;
           border-width: 1px;
         }
@@ -679,7 +679,8 @@ li {
           margin-right: 10px;
         }
         &__info:hover {
-          background-color: #ffffff;
+          transition: all 0.5s;
+          background-color: $white;
           color: #0674ec;
         }
       }
@@ -786,7 +787,7 @@ li {
   margin-top: 30px;
   button {
     background-color: $blue;
-    color: #ffffff;
+    color: $white;
     font-size: 16px;
     line-height: 0;
     padding: 28px 33px;
@@ -798,6 +799,9 @@ li {
 }
 
 .followers {
+  .product__item {
+    margin: 0;
+  }
   background-color: #eff1f5;
   &__arrows {
     background-color: $blue;
@@ -805,5 +809,216 @@ li {
   &__slider {
     display: flex;
     justify-content: space-between;
+  }
+}
+
+.overlay {
+  background-color: #212225;
+  &__inner {
+    padding: 188px 0 80px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__img {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      background-size: contain;
+    }
+    &--briefcase::before {
+      background-image: url("../images/briefcase.png");
+      left: 32px;
+      bottom: 52px;
+      width: 48px;
+      height: 41px;
+    }
+    &--cloud-download::before {
+      background-image: url("../images/cloud-download.png");
+      left: 18px;
+      bottom: 52px;
+      width: 48px;
+      height: 29px;
+    }
+    &--smile::before {
+      background-image: url("../images/smile.png");
+      left: 50px;
+      bottom: 46px;
+      width: 46px;
+      height: 47px;
+    }
+    &--users::before {
+      background-image: url("../images/users.png");
+      left: 28px;
+      bottom: 50px;
+      width: 48px;
+      height: 37px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    &-digits {
+      font-size: 36px;
+    }
+    &-text {
+      margin-top: 15px;
+      display: block;
+      font-size: 18px;
+      color: $white;
+    }
+  }
+}
+
+.whychoose {
+  background-color: $white;
+  &__inner {
+    margin: 120px 0 120px;
+    .text {
+      color: $grey;
+      line-height: 30px;
+      font-size: 16px;
+    }
+    .headding {
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+      width: 680px;
+      &__title {
+        font-size: 36px;
+        font-weight: 400;
+        a {
+          color: #0674ec;
+        }
+      }
+    }
+  }
+  &__items {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .item__inner {
+      border-radius: 4px;
+      margin-top: 40px;
+      max-width: 360px;
+      width: 100%;
+      background-color: $white;
+      box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+      .item__info {
+        position: relative;
+        padding: 100px 30px 46px 30px;
+        text-align: center;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-size: contain;
+          left: 150px;
+          top: 20px;
+        }
+        &--license::before {
+          background-image: url("../images/license.png");
+          width: 60px;
+          height: 48px;
+        }
+        &--wand::before {
+          background-image: url("../images/magic-wand.png");
+          width: 56px;
+          height: 58px;
+        }
+        &--lock::before {
+          background-image: url("../images/lock.png");
+          left: 160px;
+          width: 39px;
+          height: 51px;
+        }
+        &--graph::before {
+          background-image: url("../images/chart-bars.png");
+          width: 57px;
+          height: 57px;
+        }
+        &--leaf::before {
+          background-image: url("../images/leaf.png");
+          width: 60px;
+          height: 60px;
+        }
+        &--phone::before {
+          background-image: url("../images/phone.png");
+          width: 60px;
+          height: 48px;
+        }
+
+        .title {
+          font-weight: 400;
+          font-size: 24px;
+          padding-top: 0;
+        }
+      }
+      .number {
+        color: #5c87f8;
+        font-size: 48px;
+        font-weight: 300;
+        opacity: 0.2;
+        display: block;
+        margin: 20px 0 0 16px;
+      }
+    }
+  }
+}
+
+
+.sellandbuy{
+  display: flex;
+  .sell,
+  .buy{
+    width: 50%;
+    height: 560px;
+    background-size: cover;
+    color: $white;
+    text-align: center;
+    .img{
+      margin-top: 100px;
+    }
+    .title{
+      font-size: 36px;
+      font-weight: 400;
+      line-height: 30px;
+    }
+    .text{
+      max-width: 600px;
+      width: 100%;
+      line-height: 30px;
+      font-size: 16px;
+      margin: 0 auto 46px auto;
+    }
+    .btn{
+      line-height: 0;
+      font-size: 16px;
+      background-color: $white;
+      padding: 26px 25px 26px 25px;
+      box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
+      border-radius: 25px;
+      &:hover{
+        color: $white;
+        background-color:  rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.2);
+        border-style: solid;
+        border-width: 1px;
+        border-color: $white;
+      }
+    }
+  }
+  .sell{
+    background-image: url("../images/BGblue.png");
+    .btn{
+      color: $blue;
+    }
+  }
+  .buy{
+    background-image: url("../images/BGpurple.png");
+    .btn{
+      color: #7347c1;
+    }
   }
 }

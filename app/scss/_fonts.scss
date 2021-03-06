@@ -57,24 +57,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-star:before {
-  content: "\f005";
+.icon-pinterest:before {
+  content: "\e906";
 }
-.icon-bell-o:before {
-  content: "\f0a2";
-}
-.icon-angle-left:before {
-  content: "\f104";
-}
-.icon-angle-right:before {
-  content: "\f105";
+.icon-google:before {
+  content: "\e902";
 }
 .icon-star-half-empty:before {
-  content: "\f123";
+  content: "\e901";
 }
-.icon-star-half-full:before {
-  content: "\f123";
+.icon-star:before {
+  content: "\e905";
 }
-.icon-star-half-o:before {
-  content: "\f123";
+.icon-angle-right:before {
+  content: "\e903";
+}
+.icon-angle-left:before {
+  content: "\e904";
+}
+.icon-dots-three-vertical:before {
+  content: "\e900";
+}
+.icon-facebook:before {
+  content: "\ea90";
+}
+.icon-twitter:before {
+  content: "\ea96";
+}
+.icon-dribbble:before {
+  content: "\eaa7";
+}
+.icon-linkedin:before {
+  content: "\eaca";
 }

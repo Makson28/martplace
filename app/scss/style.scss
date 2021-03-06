@@ -871,14 +871,19 @@ li {
   }
 }
 
-.whychoose {
+.whychoose,
+.feedback,
+.news {
   background-color: $white;
+  .text {
+    color: $grey;
+    line-height: 30px;
+    font-size: 16px;
+  }
   &__inner {
-    margin: 120px 0 120px;
-    .text {
-      color: $grey;
-      line-height: 30px;
-      font-size: 16px;
+    padding: 80px 0 120px;
+    .items__inner {
+      margin-top: 58px;
     }
     .headding {
       margin-left: auto;
@@ -894,6 +899,9 @@ li {
       }
     }
   }
+}
+
+.whychoose {
   &__items {
     display: flex;
     justify-content: space-between;
@@ -967,41 +975,40 @@ li {
   }
 }
 
-
-.sellandbuy{
+.sellandbuy {
   display: flex;
   .sell,
-  .buy{
+  .buy {
     width: 50%;
     height: 560px;
     background-size: cover;
     color: $white;
     text-align: center;
-    .img{
+    .img {
       margin-top: 100px;
     }
-    .title{
+    .title {
       font-size: 36px;
       font-weight: 400;
       line-height: 30px;
     }
-    .text{
+    .text {
       max-width: 600px;
       width: 100%;
       line-height: 30px;
       font-size: 16px;
       margin: 0 auto 46px auto;
     }
-    .btn{
+    .btn {
       line-height: 0;
       font-size: 16px;
       background-color: $white;
       padding: 26px 25px 26px 25px;
       box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.1);
       border-radius: 25px;
-      &:hover{
+      &:hover {
         color: $white;
-        background-color:  rgba(255, 255, 255, 0.1);
+        background-color: rgba(255, 255, 255, 0.1);
         box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.2);
         border-style: solid;
         border-width: 1px;
@@ -1009,16 +1016,344 @@ li {
       }
     }
   }
-  .sell{
+  .sell {
     background-image: url("../images/BGblue.png");
-    .btn{
+    .btn {
       color: $blue;
     }
   }
-  .buy{
+  .buy {
     background-image: url("../images/BGpurple.png");
-    .btn{
+    .btn {
       color: #7347c1;
+    }
+  }
+}
+
+.feedback {
+  .items__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  .item {
+    max-width: 555px;
+    width: 100%;
+    padding: 50px 40px 28px 40px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border-left: solid;
+    border-left-width: 2px;
+    border-color: $blue;
+    box-shadow: 0px 2px 50px 0px rgba(0, 0, 0, 0.08);
+  }
+  .author {
+    position: relative;
+    display: flex;
+    align-items: center;
+    &__info {
+      margin-left: 20px;
+      .author__name {
+        font-size: 20px;
+      }
+      .author__technology {
+        font-size: 16px;
+        color: $grey;
+      }
+    }
+    &::after {
+      content: "";
+      background-image: url("../images/bubble.png");
+      position: absolute;
+      right: 0;
+      top: 8px;
+      width: 57px;
+      height: 51px;
+    }
+  }
+  .btn__inner {
+    margin-top: 60px;
+  }
+  .btn {
+    background-color: $blue;
+    color: #fff;
+    font-size: 16px;
+    line-height: 0;
+    padding: 28px 33px;
+    border-style: none;
+    border-radius: 25px;
+    outline: transparent;
+  }
+}
+
+.news {
+  background-color: #eff1f5;
+  .items__inner {
+    display: flex;
+    justify-content: space-between;
+    .item {
+      max-width: 360px;
+      width: 100%;
+      background-color: $white;
+      border-radius: 4px;
+      box-shadow: 0px 2px 4px 0px rgba(108, 111, 115, 0.1);
+      &__img {
+        width: 360px;
+        height: 230px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+      }
+      &__content {
+        padding: 0 28px;
+        line-height: 30px;
+        .title {
+          font-weight: 500;
+          font-size: 22px;
+        }
+        .text {
+          font-size: 16px;
+          color: $grey;
+          margin-bottom: 22px;
+        }
+      }
+      .line {
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        border-bottom-color: #ececec;
+        &__v {
+          border-left-style: solid;
+          border-left-width: 1px;
+          border-left-color: #ececec;
+        }
+      }
+      &__underline {
+        display: flex;
+        justify-content: space-between;
+        color: #999999;
+        margin: 14px 0 14px 0;
+        .info {
+          width: 37%;
+          display: flex;
+          justify-content: space-between;
+        }
+        .date {
+          max-width: 110px;
+          width: 100%;
+        }
+        .date,
+        .coments,
+        .views {
+          position: relative;
+          padding-left: 24px;
+        }
+
+        .date::before,
+        .coments::before,
+        .views::before {
+          content: "";
+          position: absolute;
+          left: 0;
+        }
+
+        .date::before {
+          background-image: url("../images/clock.png");
+          top: 7px;
+          width: 16px;
+          height: 15px;
+        }
+        .coments::before {
+          background-image: url("../images/bubble_s.png");
+          top: 8px;
+          width: 16px;
+          height: 14px;
+        }
+        .views::before {
+          background-image: url("../images/eye.png");
+          top: 10px;
+          width: 17px;
+          height: 9px;
+        }
+      }
+    }
+  }
+}
+
+.support {
+  background-color: $white;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    .line {
+      border-left-style: solid;
+      border-left-width: 1px;
+      border-left-color: #ececec;
+    }
+  }
+  &__item {
+    max-width: 360px;
+    width: 100%;
+    text-align: center;
+    margin: 62px auto 30px auto;
+    .title {
+      font-weight: 500;
+      line-height: 24px;
+      a {
+        color: $blue;
+      }
+      a:hover {
+        color: #7347c1;
+      }
+    }
+  }
+}
+
+.join {
+  background-image: url("../images/Overlay.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  &__inner {
+    text-align: center;
+    color: $white;
+    padding: 90px 0 100px 0;
+    .title {
+      font-size: 36px;
+      font-weight: 400;
+    }
+    .text {
+      font-size: 18px;
+    }
+    .btn {
+      margin-top: 30px;
+      font-size: 16px;
+      background-color: $white;
+      color: $blue;
+      line-height: 0;
+      padding: 26px 30px;
+      border-style: none;
+      border-radius: 25px;
+      outline: transparent;
+      &:hover {
+        color: $white;
+        background-color: rgba(255, 255, 255, 0.1);
+        box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.2);
+        border-style: solid;
+        border-width: 1px;
+        border-color: $white;
+      }
+    }
+  }
+}
+
+.footer {
+  background-color: #262b30;
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    padding: 120px 0 120px 0;
+    p,
+    a {
+      color: #ababab;
+    }
+    .title {
+      font-size: 18px;
+      font-weight: 400;
+      color: $white;
+    }
+
+    .about {
+      max-width: 264px;
+      width: 100%;
+      .logo {
+        display: flex;
+        align-items: center;
+        &__text {
+          padding-left: 6px;
+          font-weight: 700;
+          font-size: 24px;
+          color: $white;
+          span {
+            color: $blue;
+          }
+        }
+      }
+
+      .phone,
+      .mail,
+      .map {
+        position: relative;
+        padding-left: 30px;
+      }
+      .phone,
+      .mail,
+      .map:not(:last-child) {
+        margin-bottom: 5px;
+      }
+      .phone::before,
+      .mail::before,
+      .map::before {
+        position: absolute;
+        content: "";
+        left: 0;
+      }
+      .phone::before {
+        background-image: url("../images/phone_v2.png");
+        width: 18px;
+        height: 17px;
+        top: 5px;
+      }
+      .mail::before {
+        background-image: url("../images/envelope_v2.png");
+        width: 17px;
+        height: 11px;
+        top: 10px;
+      }
+      .map::before {
+        background-image: url("../images/map-marker.png");
+        width: 10px;
+        height: 17px;
+        top: 15px;
+      }
+    }
+
+    .company,
+    .help {
+      a {
+        display: flex;
+        line-height: 32px;
+      }
+    }
+    .newsletter {
+      max-width: 360px;
+      width: 100%;
+
+      .form {
+        margin-top: 35px;
+        position: relative;
+        input {
+          height: 50px;
+          border: none;
+          border-radius: 30px;
+          outline: none;
+          padding-left: 30px;
+          padding-right: 125px;
+          &::placeholder {
+            color: #ababab;
+            font-size: 15px;
+          }
+        }
+        button {
+          position: absolute;
+          background-color: $blue;
+          border: none;
+          color: #fff;
+          height: 51px;
+          border-radius: 30px;
+          width: 115px;
+          right: 0;
+          cursor: pointer;
+          outline: none;
+        }
+      }
     }
   }
 }

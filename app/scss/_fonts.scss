@@ -1,50 +1,51 @@
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../fonts/Quicksand-Light.woff') format('woff'),
-       url('../fonts/Quicksand-Light.woff2') format('woff2');
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Light.woff") format("woff"),
+    url("../fonts/Quicksand-Light.woff2") format("woff2");
   font-weight: 300;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../fonts/Quicksand-Regular.woff') format('woff'),
-       url('../fonts/Quicksand-Regular.woff2') format('woff2');
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Regular.woff") format("woff"),
+    url("../fonts/Quicksand-Regular.woff2") format("woff2");
   font-weight: 400;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../fonts/Quicksand-Medium.woff') format('woff'),
-       url('../fonts/Quicksand-Medium.woff2') format('woff2');
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Medium.woff") format("woff"),
+    url("../fonts/Quicksand-Medium.woff2") format("woff2");
   font-weight: 500;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'Quicksand';
-  src: url('../fonts/Quicksand-Bold.woff') format('woff'),
-       url('../fonts/Quicksand-Bold.woff2') format('woff2');
+  font-family: "Quicksand";
+  src: url("../fonts/Quicksand-Bold.woff") format("woff"),
+    url("../fonts/Quicksand-Bold.woff2") format("woff2");
   font-weight: 700;
   font-display: swap;
 }
 
 @font-face {
-  font-family: 'icomoon';
-  src:  url('../fonts/icomoon.eot?g39lhk');
-  src:  url('../fonts/icomoon.eot?g39lhk#iefix') format('embedded-opentype'),
-    url('../fonts/icomoon.ttf?g39lhk') format('truetype'),
-    url('../fonts/icomoon.woff?g39lhk') format('woff'),
-    url('../fonts/icomoon.svg?g39lhk#icomoon') format('svg');
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?g39lhk");
+  src: url("../fonts/icomoon.eot?g39lhk#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?g39lhk") format("truetype"),
+    url("../fonts/icomoon.woff?g39lhk") format("woff"),
+    url("../fonts/icomoon.svg?g39lhk#icomoon") format("svg");
   font-weight: normal;
   font-style: normal;
   font-display: block;
 }
 
-[class^="icon-"], [class*=" icon-"] {
+[class^="icon-"],
+[class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
-  font-family: 'icomoon' !important;
+  font-family: "icomoon" !important;
   speak: never;
   font-style: normal;
   font-weight: normal;
@@ -57,11 +58,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-pinterest:before {
+.icon-wordpress:before {
+  content: "\e902";
+  color: #7347c1;
+}
+.icon-th-list:before {
   content: "\e906";
 }
-.icon-google:before {
-  content: "\e902";
+.icon-th:before {
+  content: "\e907";
 }
 .icon-star-half-empty:before {
   content: "\e901";
@@ -78,6 +83,9 @@
 .icon-dots-three-vertical:before {
   content: "\e900";
 }
+.icon-google1:before {
+  content: "\ea88";
+}
 .icon-facebook:before {
   content: "\ea90";
 }
@@ -89,4 +97,24 @@
 }
 .icon-linkedin:before {
   content: "\eaca";
+}
+.icon-pinterest1:before {
+  content: "\ead1";
+}
+
+@font-face {
+  font-family: "Linearicons-Free";
+  src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot);
+  src: url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.eot?#iefix)
+      format("embedded-opentype"),
+    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff2)
+      format("woff2"),
+    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.ttf)
+      format("truetype"),
+    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.woff)
+      format("woff"),
+    url(https://cdn.linearicons.com/free/1.0.0/Linearicons-Free.svg#Linearicons-Free)
+      format("svg");
+  font-weight: 400;
+  font-style: normal;
 }

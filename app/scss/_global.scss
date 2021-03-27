@@ -8,6 +8,11 @@ html {
   box-sizing: inherit;
 }
 
+html,
+body {
+  height: 100%;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -24,7 +29,7 @@ li {
 body {
   font-family: "Quicksand";
   font-weight: 400;
-  font-size: 15px;
+  font-size: 16px;
   overflow-x: hidden;
   line-height: 28px;
 }
@@ -33,4 +38,15 @@ body {
   max-width: 1170px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.wrapper {
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+}
+.content {
+	flex: 1 0 auto;
+}
+.footer {
+	flex: 0 0 auto;
 }

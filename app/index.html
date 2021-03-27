@@ -5,1139 +5,1471 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>MartPlace</title>
+  <link rel="shortcut icon" href="images/header-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="stylesheet" href="css/libs.min.css" />
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__top">
-      <div class="container">
-        <div class="header__top-inner">
-          <div class="header__logo">
-            <a href="#" class="logo--m">
-              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px"
-                height="50px">
-                <image x="0px" y="0px" width="50px" height="50px"
-                  xlink:href="data:img/png;base64,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" />
-              </svg>
-              <a href="#" class="logo--martplace black">Mart<span class="blue">Place</span></a>
-            </a>
-          </div>
-          <div class="header__box">
-            <a href="#" class="header__btn-seller">Become a Seller</a>
-            <div class="notification">
-              <a href="#" class="notification__icon notification__icon--alarm">
-                <span>25</span>
-              </a>
-              <a href="#" class="notification__icon notification__icon--envelope">
-                <span>6</span>
-              </a>
-              <a href="#" class="notification__icon notification__icon--cart">
-                <span>2</span>
-              </a>
-            </div>
-            <div class="user">
-              <div class="user__img">
-                <img src="images/user.png" alt="user avatar">
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <div class="header__logo">
+                <a href="#" class="logo--m">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px"
+                    height="50px">
+                    <image x="0px" y="0px" width="50px" height="50px"
+                      xlink:href="data:img/png;base64,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" />
+                  </svg>
+                  <a href="#" class="logo--martplace black">Mart<span class="blue">Place</span></a>
+                </a>
               </div>
-              <div class="user__info">
-                <div class="user__name">
-                  Taofiq Hakim
+              <div class="header__box">
+
+                <a href="#" class="header__btn-seller">Become a Seller</a>
+                <div class="notification">
+
+                  <div href="#" class="notification__icon lnr lnr-alarm">
+                    <span class="notification__count">25</span>
+
+                    <div class="messages">
+                      <div class="notification__title">My Notifications<a href="#">View All</a></div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Anderson <span class="action">added to Favourite</span></a>
+                            <a href="#" class="item-message">Marketify Coffee Shop</a>
+                            <span class="author-time">Just Now</span>
+                          </div>
+                          <span class="lnr lnr-heart"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Michael Jorden <span class="action">commented on</span></a>
+                            <a href="#" class="item-message">MartPlace Extension Bundle</a>
+                            <span class="author-time">2 hours ago</span>
+                          </div>
+                          <span class="lnr lnr-bubble"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Moshed <span class="action">Purchased</span></a>
+                            <a href="#" class="item-message">Bryson-Responsive Template</a>
+                            <span class="author-time">6 hours ago</span>
+                          </div>
+                          <span class="lnr lnr-cart"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Tamim <span class="action">wrote a review on</span></a>
+                            <a href="#" class="item-message">Rida-Responsive vCard Temp...</a>
+                            <span class="author-time">2 days ago</span>
+                          </div>
+                          <span class="lnr lnr-star"></span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div href="#" class="notification__icon lnr lnr-envelope">
+                    <span class="notification__count">6</span>
+
+                    <div class="messages">
+                      <div class="notification__title">My Messages<a href="#">View All</a></div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Washim<span class="lnr lnr-envelope"></span></a>
+                            <span class="author-time recently">Just Now</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Bulbul Ahmed<span class="lnr lnr-envelope"></span></a>
+                            <span class="author-time recently">2 hours ago</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">EchoTheme <svg class="reply"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16px" height="12px">
+                                <path fill-rule="evenodd" fill="rgb(85, 85, 85)"
+                                  d="M7.333,3.338 L7.333,1.000 C7.333,0.448 6.885,-0.000 6.333,-0.000 C6.085,-0.000 5.846,0.095 5.660,0.267 L5.230,0.665 C3.814,1.975 1.443,4.168 0.230,5.385 C0.082,5.534 -0.000,5.752 -0.000,6.000 C-0.000,6.247 0.082,6.465 0.230,6.615 C1.443,7.831 3.814,10.024 5.230,11.334 L5.660,11.732 C5.846,11.905 6.085,12.000 6.333,12.000 C6.885,12.000 7.333,11.551 7.333,11.000 L7.333,8.669 C12.133,8.736 15.333,10.250 15.333,11.666 C15.333,11.851 15.482,12.000 15.666,12.000 C15.851,12.000 16.000,11.851 16.000,11.666 C16.000,7.175 12.142,3.501 7.333,3.338 ZM7.000,8.000 C6.816,8.000 6.666,8.149 6.666,8.333 L6.666,11.000 C6.666,11.184 6.517,11.333 6.333,11.333 C6.232,11.333 6.157,11.284 6.113,11.243 L5.683,10.845 C4.270,9.538 1.906,7.351 0.703,6.144 C0.685,6.126 0.666,6.074 0.666,6.000 C0.666,5.925 0.685,5.873 0.703,5.855 C1.906,4.648 4.270,2.461 5.683,1.155 L6.113,0.756 C6.157,0.715 6.232,0.666 6.333,0.666 C6.517,0.666 6.666,0.816 6.666,1.000 L6.666,3.666 C6.666,3.850 6.816,4.000 7.000,4.000 C11.008,4.000 14.364,6.616 15.156,10.090 C13.734,8.844 10.654,8.000 7.000,8.000 Z" />
+                              </svg></a>
+                            <span class="author-time">Jul 16</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Themeluva</a>
+                            <span class="author-time">May 23</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Adnan</a>
+                            <span class="author-time">Mar 26</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div href="#" class="notification__icon lnr lnr-cart">
+                    <span class="notification__count">2</span>
+
+                    <div class="messages">
+
+                      <div class="messages__item">
+                        <div class="messages__item-inner">
+                          <a href="#" class="item-avatar" style="background-image: url(images/item.png);"></a>
+                          <div class="item-descr">
+                            <div class="item-info">
+                              <a href="#" class="item-name">Finance and Consulting Business Theme</a>
+                              <a href="#" class="author-technology"><span class="icon-wordpress"></span>Wordpress</a>
+                            </div>
+                            <div class="action">
+                              <span class="lnr lnr-trash"></span>
+                              <span class="price">$60</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <div class="messages__item-inner">
+                          <a href="#" class="item-avatar" style="background-image: url(images/item.png);"></a>
+                          <div class="item-descr">
+                            <div class="item-info">
+                              <a href="#" class="item-name">Flounce - Multipurpose OpenCart Theme</a>
+                              <a href="#" class="author-technology"><span class="icon-wordpress"></span>Wordpress</a>
+                            </div>
+                            <div class="action">
+                              <span class="lnr lnr-trash"></span>
+                              <span class="price">$20</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="total">Total :<span>$80</span></div>
+                      <div class="butns">
+                        <a href="#" class="btn-cart">Go to Cart</a>
+                        <a href="#" class="btn-checkout">Go to Checkout</a>
+                      </div>
+
+                    </div>
+
+                  </div>
+
                 </div>
-                <div class="user__money">
-                  $20.45
+                <div class="user drop-down">
+                  <a href="#" class="user__img">
+                    <img src="images/user.png" alt="user avatar">
+                  </a>
+                  <div class="user__info">
+                    <a href="#" class="user__name">
+                      Taofiq Hakim
+                    </a>
+                    <a href="#" class="user__money">
+                      $20.45
+                    </a>
+                  </div>
+
+                  <ul class="drop-down__list">
+                    <li><span class="lnr lnr-user"></span><a href="#">Profile Page</a></li>
+                    <li><span class="lnr lnr-home"></span><a href="#">Dashboard</a></li>
+                    <li><span class="lnr lnr-cog"></span><a href="#">Account Settings</a></li>
+                    <li><span class="lnr lnr-cart"></span><a href="#">Your Purchases</a></li>
+                    <li><span class="lnr lnr-heart"></span><a href="#">Your Favorites</a></li>
+                    <li><span class="lnr lnr-dice"></span><a href="#">Add Credits</a></li>
+                    <li><span class="lnr lnr-chart-bars"></span><a href="#">Sales Statements</a></li>
+                    <li><span class="lnr lnr-upload"></span><a href="#">Upload Items</a></li>
+                    <li><span class="lnr lnr-book"></span><a href="#">Edit Item</a></li>
+                    <li><span class="lnr lnr-briefcase"></span><a href="#">Withdrawals</a></li>
+                    <li><span class="lnr lnr-exit"></span><a href="#">Logout</a></li>
+                  </ul>
+
                 </div>
+                <a href="#" class="header__btn header__btn--login">Login</a>
+                <a href="#" class="header__btn header__btn--register">Register</a>
               </div>
             </div>
-            <a href="#" class="header__btn header__btn--login">Login</a>
-            <a href="#" class="header__btn header__btn--register">Register</a>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="header__bottom">
-      <div class="container">
-        <div class="header__bottom-inner">
-          <nav class="menu">
-            <ul class="menu__list">
-              <li>
-                <a href="#">Home</a>
-              </li>
-              <li>
-                <a href="#">All products</a>
-              </li>
-              <li>
-                <a href="#">Wordpress</a>
-              </li>
-              <li>
-                <a href="#">Festures</a>
-              </li>
-              <li>
-                <a href="#">Pages</a>
-              </li>
-            </ul>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-inner">
+              <nav class="menu">
 
-            <div class="header__search">
-              <form>
-                <input type="text" placeholder="Search product here..." required>
-                <button type="submit">
-                </button>
-              </form>
+                <ul class="menu__list">
+                  <li class="drop-down"><a class="hov" href="#">Home</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Home One Multi User</a></li>
+                      <li><a href="#">Home Two Single User</a></li>
+                      <li><a href="#">Home Three Product</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">All products</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Recent Items</a></li>
+                      <li><a href="#">Popular Items</a></li>
+                      <li><a href="#">Featured Items</a></li>
+                      <li><a href="#">Free Templates</a></li>
+                      <li><a href="#">Follow Feed</a></li>
+                      <li><a href="#">Top Authors</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">Wordpress</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Popular Items</a></li>
+                      <li><a href="#">Admin Templates</a></li>
+                      <li><a href="#">Blog / Magazine / News</a></li>
+                      <li><a href="#">Creative</a></li>
+                      <li><a href="#">Corporate Business</a></li>
+                      <li><a href="#">Resume Portfolio</a></li>
+                      <li><a href="#">eCommerce</a></li>
+                      <li><a href="#">Entertainment</a></li>
+                      <li><a href="#">Landing Pages</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">Festures</a></li>
+
+                  <li class="drop-down__mega"><a class="hov" href="#">Pages</a>
+                    <div class="mega-menu">
+                      <div class="mega-menu__inner">
+                        <div class="mega-menu__item mega__item-1">
+                          <div class="mega-menu__title mega__title-1">MartPlace Pages</div>
+                          <div class="mega-menu__list">
+                            <ul>
+                              <li><a href="#">Home Page One</a></li>
+                              <li><a href="#">Home Page Two</a></li>
+                              <li><a href="#">Home Page Three</a></li>
+                              <li><a href="#">Products Grid</a></li>
+                              <li><a href="#">Products List</a></li>
+                              <li><a href="#">Category Grid Sidebar</a></li>
+                              <li><a href="#">Category List Sidebar</a></li>
+                              <li><a href="#">Search Product</a></li>
+                              <li><a href="#">Single Product V-1</a></li>
+                              <li><a href="#">Single Product V-2</a></li>
+                              <li><a href="#">Single Product V-3</a></li>
+                            </ul>
+                            <ul>
+                              <li><a href="#">Single Items Comments</a></li>
+                              <li><a href="#">Single Items Reviews</a></li>
+                              <li><a href="#">Single Items Support</a></li>
+                              <li><a href="#">Single Items FAQs</a></li>
+                              <li><a href="#">Favorites Items</a></li>
+                              <li><a href="#">Author Profile</a></li>
+                              <li><a href="#">Author Items</a></li>
+                              <li><a href="#">Customer Reviews</a></li>
+                              <li><a href="#">Followers</a></li>
+                              <li><a href="#">Following</a></li>
+                              <li><a href="#">Product View Variations</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-menu__item mega__item-2">
+                          <div class="mega-menu__title mega__title-2">Dashboard</div>
+                          <div class="mega-menu__list col-4">
+                            <ul>
+                              <li><a href="#">Dashboard</a></li>
+                              <li><a href="#">Account Settings</a></li>
+                              <li><a href="#">Author Purchases</a></li>
+                              <li><a href="#">Items Rating</a></li>
+                              <li><a href="#">Add Credits</a></li>
+                              <li><a href="#">Statements</a></li>
+                              <li><a href="#">Invoice</a></li>
+                              <li><a href="#">Upload Item</a></li>
+                              <li><a href="#">Edit Items</a></li>
+                              <li><a href="#">Withdrawals</a></li>
+                              <li><a href="#">Add Payment Method</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-menu__item mega__item-3">
+                          <div class="mega-menu__title mega__title-3">Other Pages</div>
+                          <div class="mega-menu__list">
+                            <ul>
+                              <li><a href="#">Notifications</a></li>
+                              <li><a href="#">Message Inbox</a></li>
+                              <li><a href="#">Message Compose</a></li>
+                              <li><a href="#">Shopping Cart</a></li>
+                              <li><a href="#">Checkout</a></li>
+                              <li><a href="#">Login</a></li>
+                              <li><a href="#">Register</a></li>
+                              <li><a href="#">Recovery Password</a></li>
+                              <li><a href="#">Support Forum</a></li>
+                              <li><a href="#">Forum Details</a></li>
+                              <li><a href="#">How It Works</a></li>
+                            </ul>
+                            <ul>
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Pricing Plan</a></li>
+                              <li><a href="#">Testimonials</a></li>
+                              <li><a href="#">FAQs</a></li>
+                              <li><a href="#">FAQs Details</a></li>
+                              <li><a href="#">Affiliates</a></li>
+                              <li><a href="#">Terms & Conditions</a></li>
+                              <li><a href="#">Blog V-1</a></li>
+                              <li><a href="#">Blog V-2</a></li>
+                              <li><a href="#">Blog Details</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><a href="#">Menu & Footer Variation</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="header__search">
+                  <form>
+                    <input type="text" placeholder="Search product here..." required>
+                    <button type="submit">
+                    </button>
+                  </form>
+                </div>
+              </nav>
             </div>
-          </nav>
+          </div>
         </div>
-      </div>
-    </div>
-  </header>
+      </header>
 
-  <section class="slider">
-    <div class="container">
-      <div class="text">
-        <h1>Create Your Own<span>Digital Product Marketplace</span></h1>
-        <h2>MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products</h2>
-      </div>
-      <div class="btn__products">
-        <a href="#">View All Products</a>
-        <a href="#">Popular Products</a>
-      </div>
-      <div class="search">
+      <section class="slider">
         <div class="container">
-          <div class="search__wrapper">
-            <div class="search__inner">
-              <form>
-                <input type="text" placeholder="Seqrch your products...">
-                <select name="categories">
-                  <option value="category-1" selected>All Categories</option>
-                  <option value="category-2">WordPress</option>
-                  <option value="category-3">HTML Templates</option>
-                  <option value="category-4">PSD Template</option>
-                  <option value="category-5">Joomla</option>
-                </select>
-                <button type="submit">Search Now</button>
-              </form>
-            </div>
+          <div class="text">
+            <h1>Create Your Own<span>Digital Product Marketplace</span></h1>
+            <h2>MartPlace is the most powerful, & customizable template for Easy Digital Downloads Products</h2>
           </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="description">
-    <div class="container">
-      <div class="description__inner">
-        <div class="description__box">
-          <img class="description__img" src="images/Layer 65.png" alt="Layer 65">
-          <div class="description__heading">
-            Best UX Research
+          <div class="btn__products">
+            <a href="#">View All Products</a>
+            <a href="#">Popular Products</a>
           </div>
-          <div class="description__text">
-            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-            the mattis, leo quam aliquet diam
-            congue is laoreet elit metus.
-          </div>
-        </div>
-
-        <div class="description__box shadow">
-          <img class="description__img" src="images/Layer 66.png" alt="Layer 66">
-          <div class="description__heading">
-            Fully Responsive
-          </div>
-          <div class="description__text">
-            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-            the mattis, leo quam aliquet diam
-            congue is laoreet elit metus.
-          </div>
-        </div>
-
-        <div class="description__box">
-          <img class="description__img" src="images/Layer 67.png" alt="Layer 67">
-          <div class="description__heading">
-            Buy & Sell Easily
-          </div>
-          <div class="description__text">
-            Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-            the mattis, leo quam aliquet diam
-            congue is laoreet elit metus.
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="fetured">
-    <div class="container">
-      <div class="fetured__panel panel">
-        <h2 class="fetured__title title">Weekly Featured Products</h2>
-        <div class="fetured__arrows">
-          <button class="left_v1"><span class="icon-angle-left"></span></button>
-          <button class="right_v1"><span class="icon-angle-right"></span></button>
-        </div>
-      </div>
-
-      <div class="fetured__slider">
-        <div class="fetured__product">
-          <div class="fetured__wrap">
-            <div class="fetured__img">
-              <img src="images/BG6.png" alt="BG copy">
-            </div>
-            <div class="fetured__description">
-              <h3 class="fetured__heading">One Page Resume Template</h3>
-              <div class="author">
-                <a class="author__info" href="#">
-                  <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                  <span class="author__name">
-                    Aazz Tech
-                  </span>
-                </a>
-                <a class="author__techname author__techname--wordpress" href="#">
-                  WordPress
-                </a>
-              </div>
-              <div class="fetured__desctext">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                  quam
-                  aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                  mattis,
-                  leo quam aliquet congue justo ut scelerisque.</p>
-
-              </div>
-              <div class="fetured__tags">
-                <a class="tag" href="#">plugin</a>
-                <a class="tag" href="#">website</a>
-                <a class="tag" href="#">landing page</a>
-              </div>
-              <div class="fetured__underline">
-                <div class="fetured__price">$10 - $50</div>
-                <div class="fetured__likes">46</div>
-                <div class="fetured__buyes">634</div>
-                <div class="fetured__stars">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-half-empty"></span>
+          <div class="search">
+            <div class="container">
+              <div class="search__wrapper">
+                <div class="search__inner">
+                  <form>
+                    <input type="text" placeholder="Seqrch your products...">
+                    <select name="categories">
+                      <option value="category-1" selected>All Categories</option>
+                      <option value="category-2">WordPress</option>
+                      <option value="category-3">HTML Templates</option>
+                      <option value="category-4">PSD Template</option>
+                      <option value="category-5">Joomla</option>
+                    </select>
+                    <button type="submit">Search Now</button>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
         </div>
+      </section>
 
-        <div class="fetured__product">
-          <div class="fetured__wrap">
-            <div class="fetured__img">
-              <img src="images/BG6.png" alt="BG copy">
-            </div>
-            <div class="fetured__description">
-              <h3 class="fetured__heading">Two Page Resume Template</h3>
-              <div class="author">
-                <a class="author__info" href="#">
-                  <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                  <span class="author__name">
-                    Aazz Tech
-                  </span>
-                </a>
-                <a class="author__techname author__techname--wordpress" href="#">
-                  WordPress
-                </a>
+      <section class="description">
+        <div class="container">
+          <div class="description__inner">
+            <div class="description__box">
+              <img class="description__img" src="images/Layer 65.png" alt="Layer 65">
+              <div class="description__heading">
+                Best UX Research
               </div>
-              <div class="fetured__desctext">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                  quam
-                  aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                  mattis,
-                  leo quam aliquet congue justo ut scelerisque.</p>
-
-              </div>
-              <div class="fetured__tags">
-                <a class="tag" href="#">plugin</a>
-                <a class="tag" href="#">website</a>
-                <a class="tag" href="#">landing page</a>
-              </div>
-              <div class="fetured__underline">
-                <div class="fetured__price">$10 - $50</div>
-                <div class="fetured__likes">46</div>
-                <div class="fetured__buyes">634</div>
-                <div class="fetured__stars">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-half-empty"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="fetured__product">
-          <div class="fetured__wrap">
-            <div class="fetured__img">
-              <img src="images/BG6.png" alt="BG copy">
-            </div>
-            <div class="fetured__description">
-              <h3 class="fetured__heading">Three Page Resume Template</h3>
-              <div class="author">
-                <a class="author__info" href="#">
-                  <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                  <span class="author__name">
-                    Aazz Tech
-                  </span>
-                </a>
-                <a class="author__techname author__techname--wordpress" href="#">
-                  WordPress
-                </a>
-              </div>
-              <div class="fetured__desctext">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                  quam
-                  aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                  mattis,
-                  leo quam aliquet congue justo ut scelerisque.</p>
-
-              </div>
-              <div class="fetured__tags">
-                <a class="tag" href="#">plugin</a>
-                <a class="tag" href="#">website</a>
-                <a class="tag" href="#">landing page</a>
-              </div>
-              <div class="fetured__underline">
-                <div class="fetured__price">$10 - $50</div>
-                <div class="fetured__likes">46</div>
-                <div class="fetured__buyes">634</div>
-                <div class="fetured__stars">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-half-empty"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div class="fetured__product">
-          <div class="fetured__wrap">
-            <div class="fetured__img">
-              <img src="images/BG6.png" alt="BG copy">
-            </div>
-            <div class="fetured__description">
-              <h3 class="fetured__heading">Four Page Resume Template</h3>
-              <div class="author">
-                <a class="author__info" href="#">
-                  <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                  <span class="author__name">
-                    Aazz Tech
-                  </span>
-                </a>
-                <a class="author__techname author__techname--wordpress" href="#">
-                  WordPress
-                </a>
-              </div>
-              <div class="fetured__desctext">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-                  quam
-                  aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
-                  mattis,
-                  leo quam aliquet congue justo ut scelerisque.</p>
-
-              </div>
-              <div class="fetured__tags">
-                <a class="tag" href="#">plugin</a>
-                <a class="tag" href="#">website</a>
-                <a class="tag" href="#">landing page</a>
-              </div>
-              <div class="fetured__underline">
-                <div class="fetured__price">$10 - $50</div>
-                <div class="fetured__likes">46</div>
-                <div class="fetured__buyes">634</div>
-                <div class="fetured__stars">
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star"></span>
-                  <span class="icon-star-half-empty"></span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="release">
-    <div class="container">
-      <div class="release__panel panel">
-        <h2 class="release__title title">Newest Release Products</h2>
-        <div class="release__filter">
-          <span class="dots">Filter by:</span>
-        </div>
-      </div>
-
-      <div class="filter__panel">
-        <div class="filter__panel-btn">
-          <button type="button" data-filter=".category-wordpress" class="tag">WordPress</button>
-          <button type="button" data-filter=".category-plugin" class="tag">Plugins</button>
-          <button type="button" data-filter=".category-sitetemplate" class="tag">Site Template</button>
-          <button type="button" data-filter=".category-psd" class="tag">PSD Template</button>
-          <button type="button" data-filter=".category-joomla" class="tag">Joomla</button>
-          <button type="button" data-filter=".category-userinterface" class="tag">User Interface</button>
-          <button type="button" data-filter=".category-landingpage" class="tag">Landing Page</button>
-          <button type="button" data-filter=".category-software" class="tag">Software</button>
-        </div>
-      </div>
-
-      <div class="product__inner">
-        <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
-          <div class="product__item-img" style=" background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">E-commerce Shopping Cart</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Theme-Valley
-                </span>
-              </a>
-              <a class="author__techname author__techname--wordpress" href="#">
-                Plugin
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$20</div>
-              <div class="product__likes">90</div>
-              <div class="product__buyes">246</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-psd" data-order="2">
-          <div class="product__item-img" style="background-color: #3c6490;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Marketify Coffee Shop</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  EchoTheme
-                </span>
-              </a>
-              <a class="author__techname author__techname--psd" href="#">
-                PSD
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$18</div>
-              <div class="product__likes">48</div>
-              <div class="product__buyes">50</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-landingpage" data-order="3">
-          <div class="product__item-img" style="background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Bryson - Portfolio Template</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Artcorner
-                </span>
-              </a>
-              <a class="author__techname author__techname--html" href="#">
-                HTML
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$10</div>
-              <div class="product__likes">56</div>
-              <div class="product__stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star-half-empty"></span>
-              </div>
-              <div class="product__buyes">68</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
-          <div class="product__item-img" style="background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">E-commerce Shopping Cart</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Theme-Valley
-                </span>
-              </a>
-              <a class="author__techname author__techname--wordpress" href="#">
-                Plugin
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$20</div>
-              <div class="product__likes">90</div>
-              <div class="product__buyes">246</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-psd" data-order="2">
-          <div class="product__item-img" style="background-color: #3c6490;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Marketify Coffee Shop</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  EchoTheme
-                </span>
-              </a>
-              <a class="author__techname author__techname--psd" href="#">
-                PSD
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$18</div>
-              <div class="product__likes">48</div>
-              <div class="product__buyes">50</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-landingpage" data-order="3">
-          <div class="product__item-img" style="background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Bryson - Portfolio Template</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Artcorner
-                </span>
-              </a>
-              <a class="author__techname author__techname--html" href="#">
-                HTML
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$10</div>
-              <div class="product__likes">56</div>
-              <div class="product__stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star-half-empty"></span>
-              </div>
-              <div class="product__buyes">68</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      <div class="btn__inner">
-        <button type="button" data-filter=".category-allnew">All New Products</button>
-      </div>
-    </div>
-  </section>
-
-  <section class="followers">
-    <div class="container">
-      <div class="followers__panel panel">
-        <h2 class="followers__title title">Your Followers Feed</h2>
-        <div class="followers__arrows">
-          <button class="left_v2"><span class="icon-angle-left"></span></button>
-          <button class="right_v2"><span class="icon-angle-right"></span></button>
-        </div>
-      </div>
-
-      <div class="followers__slider">
-        <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
-          <div class="product__item-img" style="background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">E-commerce Shopping Cart</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Theme-Valley
-                </span>
-              </a>
-              <a class="author__techname author__techname--wordpress" href="#">
-                Plugin
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$20</div>
-              <div class="product__likes">90</div>
-              <div class="product__buyes">246</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-psd" data-order="2">
-          <div class="product__item-img" style="background-color: #3c6490;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Marketify Coffee Shop</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  EchoTheme
-                </span>
-              </a>
-              <a class="author__techname author__techname--psd" href="#">
-                PSD
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$18</div>
-              <div class="product__likes">48</div>
-              <div class="product__buyes">50</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-landingpage" data-order="3">
-          <div class="product__item-img" style="background-color: #009688;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Bryson - Portfolio Template</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  Artcorner
-                </span>
-              </a>
-              <a class="author__techname author__techname--html" href="#">
-                HTML
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$10</div>
-              <div class="product__likes">56</div>
-              <div class="product__stars">
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star"></span>
-                <span class="icon-star-half-empty"></span>
-              </div>
-              <div class="product__buyes">68</div>
-            </div>
-          </div>
-        </div>
-
-        <div class="product__item mix category-allnew category-psd" data-order="2">
-          <div class="product__item-img" style="background-color: #3c6490;">
-            <div class="more">
-              <a class="more__info" href="#">More Info</a>
-              <a class="more__info" href="#">Live Demo</a>
-            </div>
-          </div>
-          <div class="product__item-content">
-            <h3 class="product__item-title">Marketify Coffee Shop</h3>
-            <div class="author">
-              <a class="author__info" href="#">
-                <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
-                <span class="author__name">
-                  EchoTheme
-                </span>
-              </a>
-              <a class="author__techname author__techname--psd" href="#">
-                PSD
-              </a>
-            </div>
-            <div class="product__item-text">
-              <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet congue.</p>
-            </div>
-          </div>
-          <div class="line"></div>
-          <div class="product__item-content">
-            <div class="product__item-underline">
-              <div class="product__price">$18</div>
-              <div class="product__likes">48</div>
-              <div class="product__buyes">50</div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-  <section class="overlay">
-    <div class="container">
-      <div class="overlay__inner">
-        <div class="overlay__item">
-          <div class="overlay__img overlay__img--briefcase"></div>
-          <div class="overlay__text">
-            <div class="overlay__text-digits" style="color: #feb71d;">38,436<span class="overlay__text-text">items for
-                sale</span></div>
-          </div>
-        </div>
-
-        <div class="overlay__item">
-          <div class="overlay__img overlay__img--cloud-download"></div>
-          <div class="overlay__text">
-            <div class="overlay__text-digits" style="color: #58c9e9;">3,736<span class="overlay__text-text">total
-                sales</span></div>
-          </div>
-        </div>
-
-        <div class="overlay__item">
-          <div class="overlay__img overlay__img--smile"></div>
-          <div class="overlay__text">
-            <div class="overlay__text-digits" style="color: #77de51;">2,736<span class="overlay__text-text">happy
-                customers</span></div>
-          </div>
-        </div>
-
-        <div class="overlay__item">
-          <div class="overlay__img overlay__img--users"></div>
-          <div class="overlay__text">
-            <div class="overlay__text-digits" style="color: #ff6a6d;">25,736<span
-                class="overlay__text-text">members</span></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="whychoose">
-    <div class="container">
-      <div class="whychoose__inner">
-        <div class="headding">
-          <h2 class="headding__title">Why Choose <a href="#">MartPlace</a></h2>
-          <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-            fugats. Lid est
-            laborum dolo rumes fugats untras.</p>
-        </div>
-        <div class="whychoose__items">
-          <div class="item__inner">
-            <span class="number">01</span>
-            <div class="item__info item__info--license">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+              <div class="description__text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
                 the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-          <div class="item__inner">
-            <span class="number">02</span>
-            <div class="item__info item__info--wand">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-          <div class="item__inner">
-            <span class="number">03</span>
-            <div class="item__info item__info--lock">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-          <div class="item__inner">
-            <span class="number">04</span>
-            <div class="item__info item__info--graph">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-          <div class="item__inner">
-            <span class="number">05</span>
-            <div class="item__info item__info--leaf">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-          <div class="item__inner">
-            <span class="number">06</span>
-            <div class="item__info item__info--phone">
-              <h3 class="title">One Time Payment</h3>
-              <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                the mattis, leo quam aliquet diam
-                congue is laoreet elit metus.</p>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="sellandbuy">
-    <div class="sell">
-      <div class="img">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px" height="101px">
-          <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
-            d="M109.953,75.231 L75.969,75.231 L79.381,85.470 C82.609,86.308 85.001,89.244 85.001,92.731 L85.001,95.231 L92.501,95.231 C93.881,95.231 95.001,96.351 95.001,97.732 C95.001,99.113 93.881,100.232 92.501,100.232 L81.090,100.232 L38.911,100.232 L38.911,100.232 L27.500,100.232 C26.119,100.232 25.000,99.113 25.000,97.732 C25.000,96.351 26.119,95.231 27.500,95.231 L35.000,95.231 L35.000,92.731 C35.000,89.244 37.390,86.308 40.619,85.470 L44.031,75.231 L10.047,75.231 C4.507,75.231 -0.000,70.724 -0.000,65.185 L-0.000,10.278 C-0.000,4.739 4.507,0.233 10.047,0.233 L109.953,0.233 C115.493,0.233 120.000,4.739 120.000,10.278 L120.000,65.185 C120.000,70.724 115.493,75.231 109.953,75.231 ZM42.500,90.231 C41.121,90.231 40.000,91.352 40.000,92.731 L40.000,95.231 L80.001,95.231 L80.001,92.731 C80.001,91.352 78.879,90.231 77.500,90.231 L42.500,90.231 ZM74.031,85.231 L70.698,75.231 L49.302,75.231 L45.969,85.231 L74.031,85.231 ZM115.000,15.232 L20.431,15.232 C19.051,15.232 17.931,14.113 17.931,12.732 C17.931,11.351 19.051,10.231 20.431,10.231 L114.997,10.231 C114.971,7.471 112.720,5.232 109.953,5.232 L10.047,5.232 C7.264,5.232 5.000,7.496 5.000,10.278 L5.000,57.732 L99.969,57.732 C101.350,57.732 102.469,58.850 102.469,60.232 C102.469,61.612 101.350,62.732 99.969,62.732 L5.000,62.732 L5.000,65.185 C5.000,67.967 7.264,70.232 10.047,70.232 L47.500,70.232 L72.500,70.232 L109.953,70.232 C112.736,70.232 115.000,67.967 115.000,65.185 L115.000,15.232 ZM108.245,62.732 L107.188,62.732 C105.807,62.732 104.688,61.613 104.688,60.232 C104.688,58.850 105.807,57.732 107.188,57.732 L108.245,57.732 C109.626,57.732 110.745,58.850 110.745,60.232 C110.745,61.612 109.626,62.732 108.245,62.732 ZM74.588,26.034 L71.262,26.018 L70.783,29.803 L69.183,42.427 C69.016,43.743 67.852,44.688 66.546,44.598 L66.546,44.604 L47.483,43.335 C46.311,43.257 45.383,42.383 45.191,41.275 L45.188,41.275 L42.942,28.678 C42.705,27.318 43.614,26.024 44.973,25.787 C45.118,25.762 45.261,25.749 45.403,25.749 L45.403,25.748 L58.313,25.748 C59.694,25.748 60.814,26.867 60.814,28.248 C60.814,29.628 59.694,30.747 58.313,30.747 L48.386,30.747 L49.766,38.486 L64.537,39.469 L65.842,29.178 L66.599,23.206 C66.753,21.973 67.806,21.022 69.079,21.028 L74.608,21.055 C75.983,21.059 77.093,22.178 77.087,23.554 C77.082,24.928 75.963,26.039 74.588,26.034 ZM51.418,46.936 C52.795,46.936 53.917,48.060 53.918,49.437 C53.918,50.813 52.795,51.936 51.418,51.936 C50.041,51.936 48.918,50.813 48.918,49.437 C48.918,48.060 50.041,46.936 51.418,46.936 ZM64.162,46.936 C65.539,46.936 66.662,48.060 66.662,49.437 C66.662,50.813 65.539,51.936 64.162,51.936 C62.786,51.936 61.663,50.813 61.663,49.437 C61.663,48.060 62.786,46.936 64.162,46.936 ZM12.765,15.233 L11.642,15.233 C10.262,15.233 9.142,14.113 9.142,12.732 C9.142,11.351 10.262,10.232 11.642,10.232 L12.765,10.232 C14.146,10.232 15.265,11.351 15.265,12.732 C15.265,14.113 14.146,15.233 12.765,15.233 Z" />
-        </svg>
-      </div>
-      <h2 class="title">Sell Your Products</h2>
-      <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-        quam aliquet diamcongue is laoreet elit metus.</p>
-      <a href="#" class="btn">Become an Author</a>
-    </div>
-    <div class="buy">
-      <div class="img">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px" height="100px">
-          <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
-            d="M93.636,74.341 C93.483,74.616 93.276,74.840 93.037,75.013 L88.289,79.765 L99.308,90.792 C100.122,91.607 100.122,92.928 99.308,93.742 L93.668,99.386 C93.277,99.777 92.747,99.998 92.194,99.998 C91.642,99.998 91.112,99.777 90.721,99.386 L79.703,88.359 L74.711,93.356 C74.503,93.564 74.257,93.719 73.992,93.823 C72.653,94.553 71.283,95.221 69.888,95.825 L70.787,95.825 C71.937,95.825 72.870,96.760 72.870,97.911 C72.870,99.063 71.937,99.996 70.787,99.996 L49.848,99.995 C49.839,99.995 49.831,99.996 49.822,99.996 C49.819,99.996 49.815,99.996 49.811,99.996 C49.803,99.996 49.795,99.995 49.786,99.995 L29.117,99.995 C27.967,99.995 27.034,99.063 27.034,97.910 C27.034,96.760 27.967,95.825 29.117,95.825 L29.889,95.825 C28.202,95.087 26.552,94.255 24.950,93.329 C13.429,86.673 5.175,75.877 1.708,62.928 C-1.758,49.981 -0.004,36.499 6.648,24.969 C13.299,13.439 24.087,5.178 37.025,1.710 C49.962,-1.760 63.432,-0.004 74.953,6.652 C86.358,13.242 94.578,23.915 98.101,36.706 C101.619,49.482 100.034,62.848 93.636,74.341 ZM74.316,87.852 L78.230,83.935 C78.620,83.545 79.150,83.325 79.703,83.325 C80.255,83.325 80.785,83.545 81.176,83.935 L92.194,94.963 L94.888,92.267 L83.870,81.239 C83.479,80.849 83.259,80.318 83.259,79.765 C83.259,79.213 83.479,78.682 83.870,78.290 L87.783,74.374 L69.386,69.441 L74.316,87.852 ZM72.870,10.264 C62.312,4.164 49.965,2.557 38.103,5.738 C26.241,8.918 16.352,16.489 10.257,27.054 C4.161,37.620 2.555,49.977 5.733,61.849 C8.912,73.720 16.476,83.618 27.033,89.718 C40.365,97.422 56.998,97.798 70.790,90.797 L64.427,67.032 C64.234,66.314 64.440,65.545 64.967,65.017 C65.493,64.491 66.259,64.285 66.979,64.479 L90.768,70.857 C101.758,49.328 93.948,22.443 72.870,10.264 ZM88.728,41.752 C88.548,41.799 88.366,41.823 88.188,41.823 C87.268,41.823 86.426,41.209 86.176,40.277 C82.720,27.366 72.558,17.197 59.658,13.737 C58.547,13.439 57.887,12.295 58.185,11.183 C58.482,10.071 59.625,9.411 60.736,9.709 C75.070,13.553 86.361,24.851 90.201,39.196 C90.499,40.309 89.839,41.453 88.728,41.752 ZM56.704,57.849 C55.537,59.769 53.064,60.729 49.285,60.729 C45.445,60.729 43.051,59.700 42.101,57.640 C41.666,56.689 41.448,54.808 41.448,51.996 L41.448,40.143 C41.448,39.588 41.715,39.311 42.250,39.311 L44.862,39.311 C45.317,39.311 45.544,39.588 45.544,40.143 L45.544,52.887 C45.544,54.451 45.752,55.521 46.167,56.095 C46.721,56.887 47.840,57.283 49.522,57.283 C51.342,57.283 52.510,56.906 53.024,56.154 C53.459,55.541 53.677,54.472 53.677,52.947 L53.677,40.143 C53.677,39.588 53.944,39.311 54.478,39.311 L56.882,39.311 C57.357,39.311 57.595,39.589 57.595,40.143 L57.595,51.936 C57.595,53.520 57.536,54.748 57.417,55.620 C57.298,56.491 57.061,57.235 56.704,57.849 ZM52.916,12.570 C52.863,12.570 52.811,12.567 52.757,12.563 C52.253,12.526 51.727,12.497 51.196,12.479 C50.046,12.438 49.145,11.473 49.186,10.322 C49.225,9.172 50.185,8.270 51.340,8.311 C51.927,8.330 52.509,8.363 53.069,8.404 C54.217,8.490 55.077,9.491 54.991,10.640 C54.909,11.735 53.995,12.570 52.916,12.570 ZM41.719,88.799 C41.470,89.729 40.627,90.344 39.708,90.344 C39.529,90.344 39.348,90.322 39.167,90.273 C24.833,86.428 13.543,75.129 9.702,60.785 C9.404,59.673 10.064,58.529 11.176,58.230 C12.287,57.932 13.429,58.593 13.727,59.705 C17.184,72.615 27.345,82.785 40.246,86.244 C41.357,86.543 42.017,87.686 41.719,88.799 ZM34.706,50.942 C35.330,51.723 35.641,52.818 35.641,54.224 C35.641,57.036 34.642,58.839 32.644,59.630 C31.495,60.086 29.477,60.314 26.588,60.314 L23.293,60.314 C22.225,60.314 21.438,60.066 20.934,59.571 C20.429,59.076 20.177,58.274 20.177,57.165 L20.177,42.610 C20.177,40.430 21.216,39.342 23.294,39.342 L26.766,39.342 C27.894,39.342 28.973,39.402 30.002,39.520 C31.704,39.697 32.960,40.198 33.771,41.020 C34.583,41.841 34.988,43.016 34.988,44.541 C34.988,45.826 34.741,46.857 34.246,47.630 C33.752,48.401 32.970,48.967 31.901,49.323 C33.148,49.620 34.083,50.159 34.706,50.942 ZM30.432,43.604 C30.145,43.257 29.724,42.996 29.170,42.816 C28.735,42.698 28.082,42.638 27.211,42.638 L25.164,42.638 C24.570,42.638 24.273,42.996 24.273,43.707 L24.273,43.707 L24.273,47.867 L27.004,47.867 C28.270,47.867 29.111,47.777 29.526,47.599 C30.417,47.223 30.862,46.450 30.862,45.282 C30.862,44.509 30.718,43.950 30.432,43.604 ZM29.942,51.432 C29.428,51.234 28.507,51.134 27.181,51.134 L24.273,51.134 L24.273,55.768 C24.273,56.165 24.357,56.453 24.525,56.631 C24.693,56.808 24.985,56.898 25.401,56.898 L27.597,56.898 C28.725,56.898 29.537,56.798 30.031,56.601 C30.981,56.225 31.456,55.303 31.456,53.837 C31.456,52.649 30.951,51.848 29.942,51.432 ZM47.146,87.418 C47.654,87.456 48.179,87.484 48.707,87.502 C49.857,87.542 50.757,88.507 50.718,89.657 C50.679,90.784 49.755,91.672 48.637,91.672 C48.613,91.672 48.589,91.671 48.565,91.671 C47.980,91.650 47.398,91.620 46.834,91.577 C45.687,91.490 44.827,90.490 44.913,89.342 C44.999,88.194 45.998,87.331 47.146,87.418 ZM62.186,39.370 C62.404,39.291 63.512,39.251 65.510,39.251 C65.984,39.251 66.380,39.529 66.697,40.083 C68.597,43.233 70.002,45.688 70.912,47.451 C71.664,46.005 73.079,43.569 75.156,40.143 C75.493,39.548 75.899,39.251 76.373,39.251 C78.075,39.251 79.074,39.301 79.371,39.401 C79.609,39.499 79.727,39.668 79.728,39.905 C79.728,40.124 79.609,40.440 79.372,40.856 L72.841,51.490 L72.841,59.452 C72.841,59.729 72.762,59.947 72.604,60.105 C72.445,60.265 72.248,60.343 72.010,60.343 L69.517,60.343 C68.982,60.343 68.715,60.046 68.715,59.452 L68.716,59.452 L68.716,51.610 L62.186,40.915 C61.928,40.479 61.800,40.152 61.800,39.934 C61.800,39.678 61.928,39.488 62.186,39.370 Z" />
-        </svg>
-      </div>
-      <h2 class="title">Sell Your Products</h2>
-      <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
-        quam aliquet diamcongue is laoreet elit metus.</p>
-      <a href="#" class="btn">Become an Author</a>
-    </div>
-  </section>
-
-  <section class="feedback">
-    <div class="container">
-      <div class="feedback__inner">
-        <div class="headding">
-          <h2 class="headding__title">Our Clients <a href="#">Feedback</a></h2>
-          <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-            fugats. Lid est
-            laborum dolo rumes fugats untras.</p>
-        </div>
-        <div class="items__inner">
-          <div class="item">
-            <div class="author">
-              <img class="author__img" src="images/author_Img.png" alt="author__img">
-              <div class="author__info">
-                <div class="author__name">Taofiqul Hakim</div>
-                <div class="author__technology">Product Designer</div>
+                congue is laoreet elit metus.
               </div>
             </div>
-            <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-              is mollis. Praesent the pharetra, justo ut scelerisque.</p>
-          </div>
 
-          <div class="item">
-            <div class="author">
-              <img class="author__img" src="images/author_Img.png" alt="author__img">
-              <div class="author__info">
-                <div class="author__name">Saifullah Al Murtafee</div>
-                <div class="author__technology">Product Designer</div>
+            <div class="description__box shadow">
+              <img class="description__img" src="images/Layer 66.png" alt="Layer 66">
+              <div class="description__heading">
+                Fully Responsive
+              </div>
+              <div class="description__text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
               </div>
             </div>
-            <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-              the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi interdum
-              is mollis. Praesent the pharetra, justo ut scelerisque.</p>
-          </div>
-        </div>
-        <div class="btn__inner">
-          <a class="btn" href="#">View All Reviews</a>
-        </div>
-  </section>
 
-  <section class="news">
-    <div class="container">
-      <div class="news__inner">
-        <div class="headding">
-          <h2 class="headding__title">Latest <a href="#">News</a></h2>
-          <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
-            fugats. Lid est
-            laborum dolo rumes fugats untras.</p>
-        </div>
-
-        <div class="items__inner">
-          <div class="item">
-            <div class="item__img" style="background-color: #7385cd;"></div>
-            <div class="item__content">
-              <h3 class="title">Web Design Trends in 2017</h3>
-              <div class="text">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.</p>
+            <div class="description__box">
+              <img class="description__img" src="images/Layer 67.png" alt="Layer 67">
+              <div class="description__heading">
+                Buy & Sell Easily
+              </div>
+              <div class="description__text">
+                Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                the mattis, leo quam aliquet diam
+                congue is laoreet elit metus.
               </div>
             </div>
-            <div class="line"></div>
-            <div class="item__content">
-              <div class="item__underline">
-                <div class="date">24 Feb 2017</div>
-                <div class="line__v"></div>
-                <div class="info">
-                  <div class="coments">45</div>
-                  <div class="views">345</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="fetured">
+        <div class="container">
+          <div class="fetured__panel panel">
+            <h2 class="fetured__title title">Weekly Featured Products</h2>
+            <div class="fetured__arrows">
+              <button class="left_v1"><span class="icon-angle-left"></span></button>
+              <button class="right_v1"><span class="icon-angle-right"></span></button>
+            </div>
+          </div>
+
+          <div class="fetured__slider">
+            <div class="fetured__product">
+              <div class="fetured__wrap">
+                <div class="fetured__img">
+                  <img src="images/BG6.png" alt="BG copy">
+                </div>
+                <div class="fetured__description">
+                  <h3 class="fetured__heading">One Page Resume Template</h3>
+                  <div class="author">
+                    <a class="author__info" href="#">
+                      <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                      <span class="author__name">
+                        Aazz Tech
+                      </span>
+                    </a>
+                    <a class="author__techname" href="#"><span class="icon-wordpress"></span>
+                      WordPress
+                    </a>
+                  </div>
+                  <div class="fetured__desctext">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam
+                      aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                      mattis,
+                      leo quam aliquet congue justo ut scelerisque.</p>
+
+                  </div>
+                  <div class="fetured__tags">
+                    <a class="tag" href="#">plugin</a>
+                    <a class="tag" href="#">website</a>
+                    <a class="tag" href="#">landing page</a>
+                  </div>
+                  <div class="fetured__underline">
+                    <div class="fetured__price">$10 - $50</div>
+                    <div class="fetured__likes"><span class="lnr lnr-heart"></span>46</div>
+                    <div class="fetured__buyes"><span class="lnr lnr-cart"></span>634</div>
+                    <div class="fetured__stars">
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star-half-empty"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fetured__product">
+              <div class="fetured__wrap">
+                <div class="fetured__img">
+                  <img src="images/BG6.png" alt="BG copy">
+                </div>
+                <div class="fetured__description">
+                  <h3 class="fetured__heading">Two Page Resume Template</h3>
+                  <div class="author">
+                    <a class="author__info" href="#">
+                      <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                      <span class="author__name">
+                        Aazz Tech
+                      </span>
+                    </a>
+                    <a class="author__techname" href="#"><span class="icon-wordpress"></span>
+                      WordPress
+                    </a>
+                  </div>
+                  <div class="fetured__desctext">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam
+                      aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                      mattis,
+                      leo quam aliquet congue justo ut scelerisque.</p>
+
+                  </div>
+                  <div class="fetured__tags">
+                    <a class="tag" href="#">plugin</a>
+                    <a class="tag" href="#">website</a>
+                    <a class="tag" href="#">landing page</a>
+                  </div>
+                  <div class="fetured__underline">
+                    <div class="fetured__price">$10 - $50</div>
+                    <div class="fetured__likes"><span class="lnr lnr-heart"></span>46</div>
+                    <div class="fetured__buyes"><span class="lnr lnr-cart"></span>634</div>
+                    <div class="fetured__stars">
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star-half-empty"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fetured__product">
+              <div class="fetured__wrap">
+                <div class="fetured__img">
+                  <img src="images/BG6.png" alt="BG copy">
+                </div>
+                <div class="fetured__description">
+                  <h3 class="fetured__heading">Three Page Resume Template</h3>
+                  <div class="author">
+                    <a class="author__info" href="#">
+                      <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                      <span class="author__name">
+                        Aazz Tech
+                      </span>
+                    </a>
+                    <a class="author__techname" href="#"><span class="icon-wordpress"></span>
+                      WordPress
+                    </a>
+                  </div>
+                  <div class="fetured__desctext">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam
+                      aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                      mattis,
+                      leo quam aliquet congue justo ut scelerisque.</p>
+
+                  </div>
+                  <div class="fetured__tags">
+                    <a class="tag" href="#">plugin</a>
+                    <a class="tag" href="#">website</a>
+                    <a class="tag" href="#">landing page</a>
+                  </div>
+                  <div class="fetured__underline">
+                    <div class="fetured__price">$10 - $50</div>
+                    <div class="fetured__likes"><span class="lnr lnr-heart"></span>46</div>
+                    <div class="fetured__buyes"><span class="lnr lnr-cart"></span>634</div>
+                    <div class="fetured__stars">
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star-half-empty"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="fetured__product">
+              <div class="fetured__wrap">
+                <div class="fetured__img">
+                  <img src="images/BG6.png" alt="BG copy">
+                </div>
+                <div class="fetured__description">
+                  <h3 class="fetured__heading">Four Page Resume Template</h3>
+                  <div class="author">
+                    <a class="author__info" href="#">
+                      <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                      <span class="author__name">
+                        Aazz Tech
+                      </span>
+                    </a>
+                    <a class="author__techname" href="#"><span class="icon-wordpress"></span>
+                      WordPress
+                    </a>
+                  </div>
+                  <div class="fetured__desctext">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis, leo
+                      quam
+                      aliquet congue placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the
+                      mattis,
+                      leo quam aliquet congue justo ut scelerisque.</p>
+
+                  </div>
+                  <div class="fetured__tags">
+                    <a class="tag" href="#">plugin</a>
+                    <a class="tag" href="#">website</a>
+                    <a class="tag" href="#">landing page</a>
+                  </div>
+                  <div class="fetured__underline">
+                    <div class="fetured__price">$10 - $50</div>
+                    <div class="fetured__likes"><span class="lnr lnr-heart"></span>46</div>
+                    <div class="fetured__buyes"><span class="lnr lnr-cart"></span>634</div>
+                    <div class="fetured__stars">
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star"></span>
+                      <span class="icon-star-half-empty"></span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-
-          <div class="item">
-            <div class="item__img" style="background-color: #90bbc4;"></div>
-            <div class="item__content">
-              <h3 class="title">The best advices to start your own project</h3>
-              <div class="text">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque.</p>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="item__content">
-              <div class="item__underline">
-                <div class="date">15 Mar 2017</div>
-                <div class="line__v"></div>
-                <div class="info">
-                  <div class="coments">45</div>
-                  <div class="views">345</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="item">
-            <div class="item__img" style="background-color: #ac7fb8;"></div>
-            <div class="item__content">
-              <h3 class="title">Best Related Post Plugin</h3>
-              <div class="text">
-                <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
-                  the mattis, leo quam aliquet congue.</p>
-              </div>
-            </div>
-            <div class="line"></div>
-            <div class="item__content">
-              <div class="item__underline">
-                <div class="date">20 Dec 2016</div>
-                <div class="line__v"></div>
-                <div class="info">
-                  <div class="coments">45</div>
-                  <div class="views">345</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
         </div>
-      </div>
-    </div>
-  </section>
+      </section>
 
-  <section class="support">
-    <div class="container">
-      <div class="support__inner">
-        <div class="support__item">
-          <div class="support__img">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px"
-              height="120px">
-              <image x="0px" y="0px" width="150px" height="120px"
-                xlink:href="data:img/png;base64,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" />
+      <section class="release">
+        <div class="container">
+          <div class="release__panel panel">
+            <h2 class="release__title title">Newest Release Products</h2>
+            <div class="release__filter">
+              <span class="dots">Filter by:</span>
+            </div>
+          </div>
+
+          <div class="filter__panel">
+            <div class="filter__panel-btn">
+              <button type="button" data-filter=".category-wordpress" class="tag">WordPress</button>
+              <button type="button" data-filter=".category-plugin" class="tag">Plugins</button>
+              <button type="button" data-filter=".category-sitetemplate" class="tag">Site Template</button>
+              <button type="button" data-filter=".category-psd" class="tag">PSD Template</button>
+              <button type="button" data-filter=".category-joomla" class="tag">Joomla</button>
+              <button type="button" data-filter=".category-userinterface" class="tag">User Interface</button>
+              <button type="button" data-filter=".category-landingpage" class="tag">Landing Page</button>
+              <button type="button" data-filter=".category-software" class="tag">Software</button>
+            </div>
+          </div>
+
+          <div class="product__inner">
+            <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
+              <div class="product__item-img" style=" background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">E-commerce Shopping Cart</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Theme-Valley
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--wordpress" href="#">
+                    Plugin
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$20</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-psd" data-order="2">
+              <div class="product__item-img" style="background-color: #3c6490;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Marketify Coffee Shop</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      EchoTheme
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--psd" href="#">
+                    PSD
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$18</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-landingpage" data-order="3">
+              <div class="product__item-img" style="background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Bryson - Portfolio Template</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Artcorner
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--html" href="#">
+                    HTML
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$10</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+
+                  <div class="product__stars">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half-empty"></span>
+                  </div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
+              <div class="product__item-img" style="background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">E-commerce Shopping Cart</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Theme-Valley
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--wordpress" href="#">
+                    Plugin
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$20</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__stars">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half-empty"></span>
+                  </div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-psd" data-order="2">
+              <div class="product__item-img" style="background-color: #3c6490;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Marketify Coffee Shop</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      EchoTheme
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--psd" href="#">
+                    PSD
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$18</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-landingpage" data-order="3">
+              <div class="product__item-img" style="background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Bryson - Portfolio Template</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Artcorner
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--html" href="#">
+                    HTML
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$10</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__stars">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half-empty"></span>
+                  </div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+          <div class="btn__inner">
+            <button type="button" data-filter=".category-allnew">All New Products</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="followers">
+        <div class="container">
+          <div class="followers__panel panel">
+            <h2 class="followers__title title">Your Followers Feed</h2>
+            <div class="followers__arrows">
+              <button class="left_v2"><span class="icon-angle-left"></span></button>
+              <button class="right_v2"><span class="icon-angle-right"></span></button>
+            </div>
+          </div>
+
+          <div class="followers__slider">
+            <div class="product__item mix category-allnew category-plugin category-wordpress" data-order="1">
+              <div class="product__item-img" style="background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">E-commerce Shopping Cart</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Theme-Valley
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--wordpress" href="#">
+                    Plugin
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$20</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__stars">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half-empty"></span>
+                  </div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-psd" data-order="2">
+              <div class="product__item-img" style="background-color: #3c6490;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Marketify Coffee Shop</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      EchoTheme
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--psd" href="#">
+                    PSD
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$18</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-landingpage" data-order="3">
+              <div class="product__item-img" style="background-color: #009688;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Bryson - Portfolio Template</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      Artcorner
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--html" href="#">
+                    HTML
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$10</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__stars">
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star"></span>
+                    <span class="icon-star-half-empty"></span>
+                  </div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="product__item mix category-allnew category-psd" data-order="2">
+              <div class="product__item-img" style="background-color: #3c6490;">
+                <div class="more">
+                  <a class="more__info" href="#">More Info</a>
+                  <a class="more__info" href="#">Live Demo</a>
+                </div>
+              </div>
+              <div class="product__item-content">
+                <h3 class="product__item-title">Marketify Coffee Shop</h3>
+                <div class="author">
+                  <a class="author__info" href="#">
+                    <img class="author__img" src="images/Ellipse 6.png" alt="Ellipse">
+                    <span class="author__name">
+                      EchoTheme
+                    </span>
+                  </a>
+                  <a class="author__techname author__techname--psd" href="#">
+                    PSD
+                  </a>
+                </div>
+                <div class="product__item-text">
+                  <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet congue.</p>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="product__item-content">
+                <div class="product__item-underline">
+                  <div class="product__price">$18</div>
+                  <div class="product__likes"><span class="lnr lnr-heart"></span>90</div>
+                  <div class="product__buyes"><span class="lnr lnr-cart"></span>246</div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </section>
+
+      <section class="overlay">
+        <div class="container">
+          <div class="overlay__inner">
+            <div class="overlay__item">
+              <div class="overlay__img overlay__img--briefcase"></div>
+              <div class="overlay__text">
+                <div class="overlay__text-digits" style="color: #feb71d;">38,436<span class="overlay__text-text">items
+                    for
+                    sale</span></div>
+              </div>
+            </div>
+
+            <div class="overlay__item">
+              <div class="overlay__img overlay__img--cloud-download"></div>
+              <div class="overlay__text">
+                <div class="overlay__text-digits" style="color: #58c9e9;">3,736<span class="overlay__text-text">total
+                    sales</span></div>
+              </div>
+            </div>
+
+            <div class="overlay__item">
+              <div class="overlay__img overlay__img--smile"></div>
+              <div class="overlay__text">
+                <div class="overlay__text-digits" style="color: #77de51;">2,736<span class="overlay__text-text">happy
+                    customers</span></div>
+              </div>
+            </div>
+
+            <div class="overlay__item">
+              <div class="overlay__img overlay__img--users"></div>
+              <div class="overlay__text">
+                <div class="overlay__text-digits" style="color: #ff6a6d;">25,736<span
+                    class="overlay__text-text">members</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="whychoose">
+        <div class="container">
+          <div class="whychoose__inner">
+            <div class="headding">
+              <h2 class="headding__title">Why Choose <a href="#">MartPlace</a></h2>
+              <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
+                fugats. Lid est
+                laborum dolo rumes fugats untras.</p>
+            </div>
+            <div class="whychoose__items">
+              <div class="item__inner">
+                <span class="number">01</span>
+                <div class="item__info item__info--license">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+              <div class="item__inner">
+                <span class="number">02</span>
+                <div class="item__info item__info--wand">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+              <div class="item__inner">
+                <span class="number">03</span>
+                <div class="item__info item__info--lock">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+              <div class="item__inner">
+                <span class="number">04</span>
+                <div class="item__info item__info--graph">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+              <div class="item__inner">
+                <span class="number">05</span>
+                <div class="item__info item__info--leaf">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+              <div class="item__inner">
+                <span class="number">06</span>
+                <div class="item__info item__info--phone">
+                  <h3 class="title">One Time Payment</h3>
+                  <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                    the mattis, leo quam aliquet diam
+                    congue is laoreet elit metus.</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sellandbuy">
+        <div class="sell">
+          <div class="img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="120px"
+              height="101px">
+              <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                d="M109.953,75.231 L75.969,75.231 L79.381,85.470 C82.609,86.308 85.001,89.244 85.001,92.731 L85.001,95.231 L92.501,95.231 C93.881,95.231 95.001,96.351 95.001,97.732 C95.001,99.113 93.881,100.232 92.501,100.232 L81.090,100.232 L38.911,100.232 L38.911,100.232 L27.500,100.232 C26.119,100.232 25.000,99.113 25.000,97.732 C25.000,96.351 26.119,95.231 27.500,95.231 L35.000,95.231 L35.000,92.731 C35.000,89.244 37.390,86.308 40.619,85.470 L44.031,75.231 L10.047,75.231 C4.507,75.231 -0.000,70.724 -0.000,65.185 L-0.000,10.278 C-0.000,4.739 4.507,0.233 10.047,0.233 L109.953,0.233 C115.493,0.233 120.000,4.739 120.000,10.278 L120.000,65.185 C120.000,70.724 115.493,75.231 109.953,75.231 ZM42.500,90.231 C41.121,90.231 40.000,91.352 40.000,92.731 L40.000,95.231 L80.001,95.231 L80.001,92.731 C80.001,91.352 78.879,90.231 77.500,90.231 L42.500,90.231 ZM74.031,85.231 L70.698,75.231 L49.302,75.231 L45.969,85.231 L74.031,85.231 ZM115.000,15.232 L20.431,15.232 C19.051,15.232 17.931,14.113 17.931,12.732 C17.931,11.351 19.051,10.231 20.431,10.231 L114.997,10.231 C114.971,7.471 112.720,5.232 109.953,5.232 L10.047,5.232 C7.264,5.232 5.000,7.496 5.000,10.278 L5.000,57.732 L99.969,57.732 C101.350,57.732 102.469,58.850 102.469,60.232 C102.469,61.612 101.350,62.732 99.969,62.732 L5.000,62.732 L5.000,65.185 C5.000,67.967 7.264,70.232 10.047,70.232 L47.500,70.232 L72.500,70.232 L109.953,70.232 C112.736,70.232 115.000,67.967 115.000,65.185 L115.000,15.232 ZM108.245,62.732 L107.188,62.732 C105.807,62.732 104.688,61.613 104.688,60.232 C104.688,58.850 105.807,57.732 107.188,57.732 L108.245,57.732 C109.626,57.732 110.745,58.850 110.745,60.232 C110.745,61.612 109.626,62.732 108.245,62.732 ZM74.588,26.034 L71.262,26.018 L70.783,29.803 L69.183,42.427 C69.016,43.743 67.852,44.688 66.546,44.598 L66.546,44.604 L47.483,43.335 C46.311,43.257 45.383,42.383 45.191,41.275 L45.188,41.275 L42.942,28.678 C42.705,27.318 43.614,26.024 44.973,25.787 C45.118,25.762 45.261,25.749 45.403,25.749 L45.403,25.748 L58.313,25.748 C59.694,25.748 60.814,26.867 60.814,28.248 C60.814,29.628 59.694,30.747 58.313,30.747 L48.386,30.747 L49.766,38.486 L64.537,39.469 L65.842,29.178 L66.599,23.206 C66.753,21.973 67.806,21.022 69.079,21.028 L74.608,21.055 C75.983,21.059 77.093,22.178 77.087,23.554 C77.082,24.928 75.963,26.039 74.588,26.034 ZM51.418,46.936 C52.795,46.936 53.917,48.060 53.918,49.437 C53.918,50.813 52.795,51.936 51.418,51.936 C50.041,51.936 48.918,50.813 48.918,49.437 C48.918,48.060 50.041,46.936 51.418,46.936 ZM64.162,46.936 C65.539,46.936 66.662,48.060 66.662,49.437 C66.662,50.813 65.539,51.936 64.162,51.936 C62.786,51.936 61.663,50.813 61.663,49.437 C61.663,48.060 62.786,46.936 64.162,46.936 ZM12.765,15.233 L11.642,15.233 C10.262,15.233 9.142,14.113 9.142,12.732 C9.142,11.351 10.262,10.232 11.642,10.232 L12.765,10.232 C14.146,10.232 15.265,11.351 15.265,12.732 C15.265,14.113 14.146,15.233 12.765,15.233 Z" />
             </svg>
           </div>
-          <h3 class="title">30 Days Money Back <a href="#">Guarantee</a></h3>
+          <h2 class="title">Sell Your Products</h2>
+          <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+            leo
+            quam aliquet diamcongue is laoreet elit metus.</p>
+          <a href="#" class="btn">Become an Author</a>
         </div>
-        <div class="line"></div>
-        <div class="support__item">
-          <div class="support__img">
-            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="155px"
-              height="117px">
-              <image x="0px" y="0px" width="155px" height="117px"
-                xlink:href="data:img/png;base64,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" />
+        <div class="buy">
+          <div class="img">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="100px"
+              height="100px">
+              <path fill-rule="evenodd" fill="rgb(255, 255, 255)"
+                d="M93.636,74.341 C93.483,74.616 93.276,74.840 93.037,75.013 L88.289,79.765 L99.308,90.792 C100.122,91.607 100.122,92.928 99.308,93.742 L93.668,99.386 C93.277,99.777 92.747,99.998 92.194,99.998 C91.642,99.998 91.112,99.777 90.721,99.386 L79.703,88.359 L74.711,93.356 C74.503,93.564 74.257,93.719 73.992,93.823 C72.653,94.553 71.283,95.221 69.888,95.825 L70.787,95.825 C71.937,95.825 72.870,96.760 72.870,97.911 C72.870,99.063 71.937,99.996 70.787,99.996 L49.848,99.995 C49.839,99.995 49.831,99.996 49.822,99.996 C49.819,99.996 49.815,99.996 49.811,99.996 C49.803,99.996 49.795,99.995 49.786,99.995 L29.117,99.995 C27.967,99.995 27.034,99.063 27.034,97.910 C27.034,96.760 27.967,95.825 29.117,95.825 L29.889,95.825 C28.202,95.087 26.552,94.255 24.950,93.329 C13.429,86.673 5.175,75.877 1.708,62.928 C-1.758,49.981 -0.004,36.499 6.648,24.969 C13.299,13.439 24.087,5.178 37.025,1.710 C49.962,-1.760 63.432,-0.004 74.953,6.652 C86.358,13.242 94.578,23.915 98.101,36.706 C101.619,49.482 100.034,62.848 93.636,74.341 ZM74.316,87.852 L78.230,83.935 C78.620,83.545 79.150,83.325 79.703,83.325 C80.255,83.325 80.785,83.545 81.176,83.935 L92.194,94.963 L94.888,92.267 L83.870,81.239 C83.479,80.849 83.259,80.318 83.259,79.765 C83.259,79.213 83.479,78.682 83.870,78.290 L87.783,74.374 L69.386,69.441 L74.316,87.852 ZM72.870,10.264 C62.312,4.164 49.965,2.557 38.103,5.738 C26.241,8.918 16.352,16.489 10.257,27.054 C4.161,37.620 2.555,49.977 5.733,61.849 C8.912,73.720 16.476,83.618 27.033,89.718 C40.365,97.422 56.998,97.798 70.790,90.797 L64.427,67.032 C64.234,66.314 64.440,65.545 64.967,65.017 C65.493,64.491 66.259,64.285 66.979,64.479 L90.768,70.857 C101.758,49.328 93.948,22.443 72.870,10.264 ZM88.728,41.752 C88.548,41.799 88.366,41.823 88.188,41.823 C87.268,41.823 86.426,41.209 86.176,40.277 C82.720,27.366 72.558,17.197 59.658,13.737 C58.547,13.439 57.887,12.295 58.185,11.183 C58.482,10.071 59.625,9.411 60.736,9.709 C75.070,13.553 86.361,24.851 90.201,39.196 C90.499,40.309 89.839,41.453 88.728,41.752 ZM56.704,57.849 C55.537,59.769 53.064,60.729 49.285,60.729 C45.445,60.729 43.051,59.700 42.101,57.640 C41.666,56.689 41.448,54.808 41.448,51.996 L41.448,40.143 C41.448,39.588 41.715,39.311 42.250,39.311 L44.862,39.311 C45.317,39.311 45.544,39.588 45.544,40.143 L45.544,52.887 C45.544,54.451 45.752,55.521 46.167,56.095 C46.721,56.887 47.840,57.283 49.522,57.283 C51.342,57.283 52.510,56.906 53.024,56.154 C53.459,55.541 53.677,54.472 53.677,52.947 L53.677,40.143 C53.677,39.588 53.944,39.311 54.478,39.311 L56.882,39.311 C57.357,39.311 57.595,39.589 57.595,40.143 L57.595,51.936 C57.595,53.520 57.536,54.748 57.417,55.620 C57.298,56.491 57.061,57.235 56.704,57.849 ZM52.916,12.570 C52.863,12.570 52.811,12.567 52.757,12.563 C52.253,12.526 51.727,12.497 51.196,12.479 C50.046,12.438 49.145,11.473 49.186,10.322 C49.225,9.172 50.185,8.270 51.340,8.311 C51.927,8.330 52.509,8.363 53.069,8.404 C54.217,8.490 55.077,9.491 54.991,10.640 C54.909,11.735 53.995,12.570 52.916,12.570 ZM41.719,88.799 C41.470,89.729 40.627,90.344 39.708,90.344 C39.529,90.344 39.348,90.322 39.167,90.273 C24.833,86.428 13.543,75.129 9.702,60.785 C9.404,59.673 10.064,58.529 11.176,58.230 C12.287,57.932 13.429,58.593 13.727,59.705 C17.184,72.615 27.345,82.785 40.246,86.244 C41.357,86.543 42.017,87.686 41.719,88.799 ZM34.706,50.942 C35.330,51.723 35.641,52.818 35.641,54.224 C35.641,57.036 34.642,58.839 32.644,59.630 C31.495,60.086 29.477,60.314 26.588,60.314 L23.293,60.314 C22.225,60.314 21.438,60.066 20.934,59.571 C20.429,59.076 20.177,58.274 20.177,57.165 L20.177,42.610 C20.177,40.430 21.216,39.342 23.294,39.342 L26.766,39.342 C27.894,39.342 28.973,39.402 30.002,39.520 C31.704,39.697 32.960,40.198 33.771,41.020 C34.583,41.841 34.988,43.016 34.988,44.541 C34.988,45.826 34.741,46.857 34.246,47.630 C33.752,48.401 32.970,48.967 31.901,49.323 C33.148,49.620 34.083,50.159 34.706,50.942 ZM30.432,43.604 C30.145,43.257 29.724,42.996 29.170,42.816 C28.735,42.698 28.082,42.638 27.211,42.638 L25.164,42.638 C24.570,42.638 24.273,42.996 24.273,43.707 L24.273,43.707 L24.273,47.867 L27.004,47.867 C28.270,47.867 29.111,47.777 29.526,47.599 C30.417,47.223 30.862,46.450 30.862,45.282 C30.862,44.509 30.718,43.950 30.432,43.604 ZM29.942,51.432 C29.428,51.234 28.507,51.134 27.181,51.134 L24.273,51.134 L24.273,55.768 C24.273,56.165 24.357,56.453 24.525,56.631 C24.693,56.808 24.985,56.898 25.401,56.898 L27.597,56.898 C28.725,56.898 29.537,56.798 30.031,56.601 C30.981,56.225 31.456,55.303 31.456,53.837 C31.456,52.649 30.951,51.848 29.942,51.432 ZM47.146,87.418 C47.654,87.456 48.179,87.484 48.707,87.502 C49.857,87.542 50.757,88.507 50.718,89.657 C50.679,90.784 49.755,91.672 48.637,91.672 C48.613,91.672 48.589,91.671 48.565,91.671 C47.980,91.650 47.398,91.620 46.834,91.577 C45.687,91.490 44.827,90.490 44.913,89.342 C44.999,88.194 45.998,87.331 47.146,87.418 ZM62.186,39.370 C62.404,39.291 63.512,39.251 65.510,39.251 C65.984,39.251 66.380,39.529 66.697,40.083 C68.597,43.233 70.002,45.688 70.912,47.451 C71.664,46.005 73.079,43.569 75.156,40.143 C75.493,39.548 75.899,39.251 76.373,39.251 C78.075,39.251 79.074,39.301 79.371,39.401 C79.609,39.499 79.727,39.668 79.728,39.905 C79.728,40.124 79.609,40.440 79.372,40.856 L72.841,51.490 L72.841,59.452 C72.841,59.729 72.762,59.947 72.604,60.105 C72.445,60.265 72.248,60.343 72.010,60.343 L69.517,60.343 C68.982,60.343 68.715,60.046 68.715,59.452 L68.716,59.452 L68.716,51.610 L62.186,40.915 C61.928,40.479 61.800,40.152 61.800,39.934 C61.800,39.678 61.928,39.488 62.186,39.370 Z" />
             </svg>
           </div>
-          <h3 class="title">Fast and Friendly <a href="#">Support</a></h3>
+          <h2 class="title">Sell Your Products</h2>
+          <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque the mattis,
+            leo
+            quam aliquet diamcongue is laoreet elit metus.</p>
+          <a href="#" class="btn">Become an Author</a>
         </div>
+      </section>
 
-      </div>
-    </div>
-  </section>
+      <section class="feedback">
+        <div class="container">
+          <div class="feedback__inner">
+            <div class="headding">
+              <h2 class="headding__title">Our Clients <a href="#">Feedback</a></h2>
+              <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
+                fugats. Lid est
+                laborum dolo rumes fugats untras.</p>
+            </div>
+            <div class="items__inner">
+              <div class="item">
+                <div class="author">
+                  <img class="author__img" src="images/author_Img.png" alt="author__img">
+                  <div class="author__info">
+                    <div class="author__name">Taofiqul Hakim</div>
+                    <div class="author__technology">Product Designer</div>
+                  </div>
+                </div>
+                <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi
+                  interdum
+                  is mollis. Praesent the pharetra, justo ut scelerisque.</p>
+              </div>
 
-  <section class="join">
-    <div class="container">
-      <div class="join__inner">
-        <h2 class="title">Ready to Join Our Marketplace!</h2>
-        <p class="text">Over 25,000 designers and developers trust the MartPlace.</p>
-        <a href="#" class="btn">Join Us Today</a>
-      </div>
-    </div>
-  </section>
+              <div class="item">
+                <div class="author">
+                  <img class="author__img" src="images/author_Img.png" alt="author__img">
+                  <div class="author__info">
+                    <div class="author__name">Saifullah Al Murtafee</div>
+                    <div class="author__technology">Product Designer</div>
+                  </div>
+                </div>
+                <p class="text">Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                  the mattis, leo quam aliquet diam congue is the laoreet elit metus. Nunc placerat mi is id nisi
+                  interdum
+                  is mollis. Praesent the pharetra, justo ut scelerisque.</p>
+              </div>
+            </div>
+            <div class="btn__inner">
+              <a class="btn" href="#">View All Reviews</a>
+            </div>
+      </section>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__inner">
-        <div class="about">
-          <div class="logo">
-            <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40px"
-                height="40px">
-                <image x="0px" y="0px" width="40px" height="40px"
-                  xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflAwMQAidUUoE2AAACLUlEQVRIx72Wz0tUURiGn5nrRAs31SqEFmKUGQVOSRmBG5dBuzLMqE371m2DINoZQhJSDVPULGtr1B8QLoIkHY2aO840lSRlKY1vi1Tm3B/n3NtA711933m/557vHM69B6FujcvXkiZ1WPzDc0h3VZOvO+oRqEvz2lJNx1Pjjsnfrl/QPjSpVjU0mAo3qE9G/X1UlakvGkqMO6XPgeoyWlZQVZ1I2OyHUO0cWlJYvvJO3NEInPQ2GijVNWDF5WPqYoFSXSdjcQOhlU8AlBZ1JBLXp7nYGitQWlBfCNdrwTmBkq9+A9evitXvBEp+y/bk9dHhTgCUyptn/KC12Rjgt0jbO+3RLs1Gjq2awCym3jBCg6D2M800B0L5Old5H8gFZrgoNKx1Z2uS9FvDIvBxCLVc126hC2o6cRsaFerRL3vLTTygyDma2CTOUwC8oC8bYQUoMcKGBTjKkxa3Fbilp1yMHRujGDcUD4QilyIbv8LD+CIbEB5wmXUjs8oYU7YSOxAesWLEFdvskgD34gX8ne0BPTIBf8Ze4AKKlHIBU+u/A72Aw7GCbmCTnUa8o11gjVkjbrDWHnCNW0Y8Hjg5qYFQ4AZfAVjmJvdc9g4nEK5T4gzwnNduc0do36L2cYaZBC/ebDnlLoYmlDPiXJaKkfjB91TAlcDhzGaZMBIFfqYCVnlmxK9QThPb/6zH6kx9ae9uue3MqysjgLMM4fGSUsoV/KternEa8YLblP8Aj2eKg7km7T8AAAAASUVORK5CYII=" />
-              </svg></a>
-            <a class="logo__text" href="#">Mart<span>Place</span></a>
+      <section class="news">
+        <div class="container">
+          <div class="news__inner">
+            <div class="headding">
+              <h2 class="headding__title">Latest <a href="#">News</a></h2>
+              <p class="text">Laborum dolo rumes fugats untras. Etharums ser quidem rerum facilis dolores nemis omnis
+                fugats. Lid est
+                laborum dolo rumes fugats untras.</p>
+            </div>
+
+            <div class="items__inner">
+              <div class="item">
+                <div class="item__img" style="background-color: #7385cd;"></div>
+                <div class="item__content">
+                  <h3 class="title">Web Design Trends in 2017</h3>
+                  <div class="text">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="item__content">
+                  <div class="item__underline">
+                    <div class="date">24 Feb 2017</div>
+                    <div class="line__v"></div>
+                    <div class="info">
+                      <div class="coments">45</div>
+                      <div class="views">345</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="item__img" style="background-color: #90bbc4;"></div>
+                <div class="item__content">
+                  <h3 class="title">The best advices to start your own project</h3>
+                  <div class="text">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque.</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="item__content">
+                  <div class="item__underline">
+                    <div class="date">15 Mar 2017</div>
+                    <div class="line__v"></div>
+                    <div class="info">
+                      <div class="coments">45</div>
+                      <div class="views">345</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="item">
+                <div class="item__img" style="background-color: #ac7fb8;"></div>
+                <div class="item__content">
+                  <h3 class="title">Best Related Post Plugin</h3>
+                  <div class="text">
+                    <p>Nunc placerat mi id nisi interdum mollis. Praesent pharetra, justo ut scelerisque
+                      the mattis, leo quam aliquet congue.</p>
+                  </div>
+                </div>
+                <div class="line"></div>
+                <div class="item__content">
+                  <div class="item__underline">
+                    <div class="date">20 Dec 2016</div>
+                    <div class="line__v"></div>
+                    <div class="info">
+                      <div class="coments">45</div>
+                      <div class="views">345</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
           </div>
-          <p class="text">Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
-            mattis, leo quam.</p>
-          <a href="tel:+67898752235" class="phone">Phone: +6789-875-2235</a>
-          <a href="mailto:support@aazztech.com" class="mail">support@aazztech.com</a>
-          <a href="#" class="map">202 New Hampshire Avenue
-            Northwest #100, New York-2573</a>
         </div>
+      </section>
 
-        <div class="company">
-          <h3 class="title">Our Company</h3>
-          <a href="#">About Us</a>
-          <a href="#">How It Work</a>
-          <a href="#">Affiliates</a>
-          <a href="#">Testimonials</a>
-          <a href="#">Contact Us</a>
-          <a href="#">Copyright Notice</a>
-          <a href="#">Blog</a>
+      <section class="support">
+        <div class="container">
+          <div class="support__inner">
+            <div class="support__item">
+              <div class="support__img">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="150px"
+                  height="120px">
+                  <image x="0px" y="0px" width="150px" height="120px"
+                    xlink:href="data:img/png;base64,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" />
+                </svg>
+              </div>
+              <h3 class="title">30 Days Money Back <a href="#">Guarantee</a></h3>
+            </div>
+            <div class="line"></div>
+            <div class="support__item">
+              <div class="support__img">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="155px"
+                  height="117px">
+                  <image x="0px" y="0px" width="155px" height="117px"
+                    xlink:href="data:img/png;base64,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" />
+                </svg>
+              </div>
+              <h3 class="title">Fast and Friendly <a href="#">Support</a></h3>
+            </div>
+
+          </div>
         </div>
+      </section>
 
-        <div class="help">
-          <h3 class="title">Our Company</h3>
-          <a href="#">Support Forum</a>
-          <a href="#">Terms & Conditions</a>
-          <a href="#">Support Policy</a>
-          <a href="#">Refund Policy</a>
-          <a href="#">FAQs</a>
-          <a href="#">Buyers Faq</a>
-          <a href="#">Sellers Faq</a>
+      <section class="join">
+        <div class="container">
+          <div class="join__inner">
+            <h2 class="title">Ready to Join Our Marketplace!</h2>
+            <p class="text">Over 25,000 designers and developers trust the MartPlace.</p>
+            <a href="#" class="btn">Join Us Today</a>
+          </div>
         </div>
+      </section>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="about">
+            <div class="logo">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px" height="40px">
+                  <image x="0px" y="0px" width="40px" height="40px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflAwMQAidUUoE2AAACLUlEQVRIx72Wz0tUURiGn5nrRAs31SqEFmKUGQVOSRmBG5dBuzLMqE371m2DINoZQhJSDVPULGtr1B8QLoIkHY2aO840lSRlKY1vi1Tm3B/n3NtA711933m/557vHM69B6FujcvXkiZ1WPzDc0h3VZOvO+oRqEvz2lJNx1Pjjsnfrl/QPjSpVjU0mAo3qE9G/X1UlakvGkqMO6XPgeoyWlZQVZ1I2OyHUO0cWlJYvvJO3NEInPQ2GijVNWDF5WPqYoFSXSdjcQOhlU8AlBZ1JBLXp7nYGitQWlBfCNdrwTmBkq9+A9evitXvBEp+y/bk9dHhTgCUyptn/KC12Rjgt0jbO+3RLs1Gjq2awCym3jBCg6D2M800B0L5Old5H8gFZrgoNKx1Z2uS9FvDIvBxCLVc126hC2o6cRsaFerRL3vLTTygyDma2CTOUwC8oC8bYQUoMcKGBTjKkxa3Fbilp1yMHRujGDcUD4QilyIbv8LD+CIbEB5wmXUjs8oYU7YSOxAesWLEFdvskgD34gX8ne0BPTIBf8Ze4AKKlHIBU+u/A72Aw7GCbmCTnUa8o11gjVkjbrDWHnCNW0Y8Hjg5qYFQ4AZfAVjmJvdc9g4nEK5T4gzwnNduc0do36L2cYaZBC/ebDnlLoYmlDPiXJaKkfjB91TAlcDhzGaZMBIFfqYCVnlmxK9QThPb/6zH6kx9ae9uue3MqysjgLMM4fGSUsoV/KternEa8YLblP8Aj2eKg7km7T8AAAAASUVORK5CYII=" />
+                </svg></a>
+              <a class="logo__text" href="#">Mart<span>Place</span></a>
+            </div>
+            <p class="text">Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
+              mattis, leo quam.</p>
+            <a href="tel:+67898752235" class="phone">Phone: +6789-875-2235</a>
+            <a href="mailto:support@aazztech.com" class="mail">support@aazztech.com</a>
+            <a href="#" class="map">202 New Hampshire Avenue
+              Northwest #100, New York-2573</a>
+          </div>
 
-        <div class="newsletter">
-          <h3 class="title">Newsletter</h3>
-          <p class="text">Subscribe to get the latest news, update and offer information. Don't worry, we won't send
-            spam!</p>
-          <div class="form">
-            <input type="text" placeholder="Enter email">
-            <button type="submit">Submit</button>
+          <div class="company">
+            <h3 class="title">Our Company</h3>
+            <a href="#">About Us</a>
+            <a href="#">How It Work</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Copyright Notice</a>
+            <a href="#">Blog</a>
+          </div>
+
+          <div class="help">
+            <h3 class="title">Our Company</h3>
+            <a href="#">Support Forum</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Support Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">FAQs</a>
+            <a href="#">Buyers Faq</a>
+            <a href="#">Sellers Faq</a>
+          </div>
+
+          <div class="newsletter">
+            <h3 class="title">Newsletter</h3>
+            <p class="text">Subscribe to get the latest news, update and offer information. Don't worry, we won't send
+              spam!</p>
+            <div class="form">
+              <input type="text" placeholder="Enter email">
+              <button type="submit">Submit</button>
+            </div>
+
+            <a class="facebook" href="#"><span class="icon-facebook facebook"></span></a>
+            <a class="twitter" href="#"><span class="icon-twitter twitter"></span></a>
+            <a class="google" href="#"><span class="icon-google1 google"></span></a>
+            <a class="pinterest" href="#"><span class="icon-pinterest1 pinterest"></span></a>
+            <a class="linkedin" href="#"><span class="icon-linkedin linkedin"></span></a>
+            <a class="dribbble" href="#"><span class="icon-dribbble dribbble"></span></a>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-inner">
+            ©2017 <a href="#">MartPlace</a>. All rights reserved. Created by <a href="#">AazzTech</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
   <script src="js/libs.min.js"></script>

@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>MartPlace</title>
+  <link rel="shortcut icon" href="images/header-logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="stylesheet" href="css/libs.min.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+    <div class="content">
+      <header class="header">
+        <div class="header__top">
+          <div class="container">
+            <div class="header__top-inner">
+              <div class="header__logo">
+                <a href="#" class="logo--m">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="50px"
+                    height="50px">
+                    <image x="0px" y="0px" width="50px" height="50px"
+                      xlink:href="data:img/png;base64,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" />
+                  </svg>
+                  <a href="#" class="logo--martplace black">Mart<span class="blue">Place</span></a>
+                </a>
+              </div>
+              <div class="header__box">
+
+                <a href="#" class="header__btn-seller">Become a Seller</a>
+                <div class="notification">
+
+                  <div href="#" class="notification__icon lnr lnr-alarm">
+                    <span class="notification__count">25</span>
+
+                    <div class="messages">
+                      <div class="notification__title">My Notifications<a href="#">View All</a></div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Anderson <span class="action">added to Favourite</span></a>
+                            <a href="#" class="item-message">Marketify Coffee Shop</a>
+                            <span class="author-time">Just Now</span>
+                          </div>
+                          <span class="lnr lnr-heart"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Michael Jorden <span class="action">commented on</span></a>
+                            <a href="#" class="item-message">MartPlace Extension Bundle</a>
+                            <span class="author-time">2 hours ago</span>
+                          </div>
+                          <span class="lnr lnr-bubble"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Moshed <span class="action">Purchased</span></a>
+                            <a href="#" class="item-message">Bryson-Responsive Template</a>
+                            <span class="author-time">6 hours ago</span>
+                          </div>
+                          <span class="lnr lnr-cart"></span>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Tamim <span class="action">wrote a review on</span></a>
+                            <a href="#" class="item-message">Rida-Responsive vCard Temp...</a>
+                            <span class="author-time">2 days ago</span>
+                          </div>
+                          <span class="lnr lnr-star"></span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div href="#" class="notification__icon lnr lnr-envelope">
+                    <span class="notification__count">6</span>
+
+                    <div class="messages">
+                      <div class="notification__title">My Messages<a href="#">View All</a></div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Washim<span class="lnr lnr-envelope"></span></a>
+                            <span class="author-time recently">Just Now</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Bulbul Ahmed<span class="lnr lnr-envelope"></span></a>
+                            <span class="author-time recently">2 hours ago</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">EchoTheme <svg class="reply"
+                                xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                width="16px" height="12px">
+                                <path fill-rule="evenodd" fill="rgb(85, 85, 85)"
+                                  d="M7.333,3.338 L7.333,1.000 C7.333,0.448 6.885,-0.000 6.333,-0.000 C6.085,-0.000 5.846,0.095 5.660,0.267 L5.230,0.665 C3.814,1.975 1.443,4.168 0.230,5.385 C0.082,5.534 -0.000,5.752 -0.000,6.000 C-0.000,6.247 0.082,6.465 0.230,6.615 C1.443,7.831 3.814,10.024 5.230,11.334 L5.660,11.732 C5.846,11.905 6.085,12.000 6.333,12.000 C6.885,12.000 7.333,11.551 7.333,11.000 L7.333,8.669 C12.133,8.736 15.333,10.250 15.333,11.666 C15.333,11.851 15.482,12.000 15.666,12.000 C15.851,12.000 16.000,11.851 16.000,11.666 C16.000,7.175 12.142,3.501 7.333,3.338 ZM7.000,8.000 C6.816,8.000 6.666,8.149 6.666,8.333 L6.666,11.000 C6.666,11.184 6.517,11.333 6.333,11.333 C6.232,11.333 6.157,11.284 6.113,11.243 L5.683,10.845 C4.270,9.538 1.906,7.351 0.703,6.144 C0.685,6.126 0.666,6.074 0.666,6.000 C0.666,5.925 0.685,5.873 0.703,5.855 C1.906,4.648 4.270,2.461 5.683,1.155 L6.113,0.756 C6.157,0.715 6.232,0.666 6.333,0.666 C6.517,0.666 6.666,0.816 6.666,1.000 L6.666,3.666 C6.666,3.850 6.816,4.000 7.000,4.000 C11.008,4.000 14.364,6.616 15.156,10.090 C13.734,8.844 10.654,8.000 7.000,8.000 Z" />
+                              </svg></a>
+                            <span class="author-time">Jul 16</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Themeluva</a>
+                            <span class="author-time">May 23</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <a href="#" class="author-avatar" style="background-image: url(images/user1.png);"></a>
+                        <div class="item-descr">
+                          <div class="item-info">
+                            <a href="#" class="author-name">Adnan</a>
+                            <span class="author-time">Mar 26</span>
+                          </div>
+                          <a href="#" class="item-message">Hello John Smith! Nunc placerat id...</a>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                  <div href="#" class="notification__icon lnr lnr-cart">
+                    <span class="notification__count">2</span>
+
+                    <div class="messages">
+
+                      <div class="messages__item">
+                        <div class="messages__item-inner">
+                          <a href="#" class="item-avatar" style="background-image: url(images/item.png);"></a>
+                          <div class="item-descr">
+                            <div class="item-info">
+                              <a href="#" class="item-name">Finance and Consulting Business Theme</a>
+                              <a href="#" class="author-technology"><span class="icon-wordpress"></span>Wordpress</a>
+                            </div>
+                            <div class="action">
+                              <span class="lnr lnr-trash"></span>
+                              <span class="price">$60</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="messages__item">
+                        <div class="messages__item-inner">
+                          <a href="#" class="item-avatar" style="background-image: url(images/item.png);"></a>
+                          <div class="item-descr">
+                            <div class="item-info">
+                              <a href="#" class="item-name">Flounce - Multipurpose OpenCart Theme</a>
+                              <a href="#" class="author-technology"><span class="icon-wordpress"></span>Wordpress</a>
+                            </div>
+                            <div class="action">
+                              <span class="lnr lnr-trash"></span>
+                              <span class="price">$20</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="total">Total :<span>$80</span></div>
+                      <div class="butns">
+                        <a href="#" class="btn-cart">Go to Cart</a>
+                        <a href="#" class="btn-checkout">Go to Checkout</a>
+                      </div>
+
+                    </div>
+
+                  </div>
+
+                </div>
+                <div class="user drop-down">
+                  <a href="#" class="user__img">
+                    <img src="images/user.png" alt="user avatar">
+                  </a>
+                  <div class="user__info">
+                    <a href="#" class="user__name">
+                      Taofiq Hakim
+                    </a>
+                    <a href="#" class="user__money">
+                      $20.45
+                    </a>
+                  </div>
+
+                  <ul class="drop-down__list">
+                    <li><span class="lnr lnr-user"></span><a href="#">Profile Page</a></li>
+                    <li><span class="lnr lnr-home"></span><a href="#">Dashboard</a></li>
+                    <li><span class="lnr lnr-cog"></span><a href="#">Account Settings</a></li>
+                    <li><span class="lnr lnr-cart"></span><a href="#">Your Purchases</a></li>
+                    <li><span class="lnr lnr-heart"></span><a href="#">Your Favorites</a></li>
+                    <li><span class="lnr lnr-dice"></span><a href="#">Add Credits</a></li>
+                    <li><span class="lnr lnr-chart-bars"></span><a href="#">Sales Statements</a></li>
+                    <li><span class="lnr lnr-upload"></span><a href="#">Upload Items</a></li>
+                    <li><span class="lnr lnr-book"></span><a href="#">Edit Item</a></li>
+                    <li><span class="lnr lnr-briefcase"></span><a href="#">Withdrawals</a></li>
+                    <li><span class="lnr lnr-exit"></span><a href="#">Logout</a></li>
+                  </ul>
+
+                </div>
+                <a href="#" class="header__btn header__btn--login">Login</a>
+                <a href="#" class="header__btn header__btn--register">Register</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="header__bottom">
+          <div class="container">
+            <div class="header__bottom-inner">
+              <nav class="menu">
+
+                <ul class="menu__list">
+                  <li class="drop-down"><a class="hov" href="#">Home</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Home One Multi User</a></li>
+                      <li><a href="#">Home Two Single User</a></li>
+                      <li><a href="#">Home Three Product</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">All products</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Recent Items</a></li>
+                      <li><a href="#">Popular Items</a></li>
+                      <li><a href="#">Featured Items</a></li>
+                      <li><a href="#">Free Templates</a></li>
+                      <li><a href="#">Follow Feed</a></li>
+                      <li><a href="#">Top Authors</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">Wordpress</a>
+                    <ul class="drop-down__list">
+                      <li><a href="#">Popular Items</a></li>
+                      <li><a href="#">Admin Templates</a></li>
+                      <li><a href="#">Blog / Magazine / News</a></li>
+                      <li><a href="#">Creative</a></li>
+                      <li><a href="#">Corporate Business</a></li>
+                      <li><a href="#">Resume Portfolio</a></li>
+                      <li><a href="#">eCommerce</a></li>
+                      <li><a href="#">Entertainment</a></li>
+                      <li><a href="#">Landing Pages</a></li>
+                    </ul>
+                  </li>
+
+                  <li class="drop-down"><a class="hov" href="#">Festures</a></li>
+
+                  <li class="drop-down__mega"><a class="hov" href="#">Pages</a>
+                    <div class="mega-menu">
+                      <div class="mega-menu__inner">
+                        <div class="mega-menu__item mega__item-1">
+                          <div class="mega-menu__title mega__title-1">MartPlace Pages</div>
+                          <div class="mega-menu__list">
+                            <ul>
+                              <li><a href="#">Home Page One</a></li>
+                              <li><a href="#">Home Page Two</a></li>
+                              <li><a href="#">Home Page Three</a></li>
+                              <li><a href="#">Products Grid</a></li>
+                              <li><a href="#">Products List</a></li>
+                              <li><a href="#">Category Grid Sidebar</a></li>
+                              <li><a href="#">Category List Sidebar</a></li>
+                              <li><a href="#">Search Product</a></li>
+                              <li><a href="#">Single Product V-1</a></li>
+                              <li><a href="#">Single Product V-2</a></li>
+                              <li><a href="#">Single Product V-3</a></li>
+                            </ul>
+                            <ul>
+                              <li><a href="#">Single Items Comments</a></li>
+                              <li><a href="#">Single Items Reviews</a></li>
+                              <li><a href="#">Single Items Support</a></li>
+                              <li><a href="#">Single Items FAQs</a></li>
+                              <li><a href="#">Favorites Items</a></li>
+                              <li><a href="#">Author Profile</a></li>
+                              <li><a href="#">Author Items</a></li>
+                              <li><a href="#">Customer Reviews</a></li>
+                              <li><a href="#">Followers</a></li>
+                              <li><a href="#">Following</a></li>
+                              <li><a href="#">Product View Variations</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-menu__item mega__item-2">
+                          <div class="mega-menu__title mega__title-2">Dashboard</div>
+                          <div class="mega-menu__list col-4">
+                            <ul>
+                              <li><a href="#">Dashboard</a></li>
+                              <li><a href="#">Account Settings</a></li>
+                              <li><a href="#">Author Purchases</a></li>
+                              <li><a href="#">Items Rating</a></li>
+                              <li><a href="#">Add Credits</a></li>
+                              <li><a href="#">Statements</a></li>
+                              <li><a href="#">Invoice</a></li>
+                              <li><a href="#">Upload Item</a></li>
+                              <li><a href="#">Edit Items</a></li>
+                              <li><a href="#">Withdrawals</a></li>
+                              <li><a href="#">Add Payment Method</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                        <div class="mega-menu__item mega__item-3">
+                          <div class="mega-menu__title mega__title-3">Other Pages</div>
+                          <div class="mega-menu__list">
+                            <ul>
+                              <li><a href="#">Notifications</a></li>
+                              <li><a href="#">Message Inbox</a></li>
+                              <li><a href="#">Message Compose</a></li>
+                              <li><a href="#">Shopping Cart</a></li>
+                              <li><a href="#">Checkout</a></li>
+                              <li><a href="#">Login</a></li>
+                              <li><a href="#">Register</a></li>
+                              <li><a href="#">Recovery Password</a></li>
+                              <li><a href="#">Support Forum</a></li>
+                              <li><a href="#">Forum Details</a></li>
+                              <li><a href="#">How It Works</a></li>
+                            </ul>
+                            <ul>
+                              <li><a href="#">About Us</a></li>
+                              <li><a href="#">Pricing Plan</a></li>
+                              <li><a href="#">Testimonials</a></li>
+                              <li><a href="#">FAQs</a></li>
+                              <li><a href="#">FAQs Details</a></li>
+                              <li><a href="#">Affiliates</a></li>
+                              <li><a href="#">Terms & Conditions</a></li>
+                              <li><a href="#">Blog V-1</a></li>
+                              <li><a href="#">Blog V-2</a></li>
+                              <li><a href="#">Blog Details</a></li>
+                              <li><a href="#">Contact Us</a></li>
+                              <li><a href="#">Menu & Footer Variation</a></li>
+                            </ul>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+
+                <div class="header__search">
+                  <form>
+                    <input type="text" placeholder="Search product here..." required>
+                    <button type="submit">
+                    </button>
+                  </form>
+                </div>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <section class="top-search">
+        <div class="container">
+          <div class="top-search__inner">
+            <div class="title"><span class="digits">4,572 </span>wordpress themes, made with love</div>
+
+            <div class="search__box">
+              <form>
+                <input type="text" placeholder="Search your products" required>
+                <button type="submit">Search</button>
+              </form>
+            </div>
+
+            <ul class="navigation">
+              <li><a href="index.html">Home</a></li>
+              <li><a class="now" href="#">Category Page Grid</a></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section class="filter">
+        <div class="container">
+          <div class="filter__inner">
+            <div class="product-class">
+              <button class="active">New Products</button>
+              <button>Popular Products</button>
+            </div>
+            <div class="product-filter">
+              <select>
+                <option> <span>Price :</span> Low To High </option>
+                <option> <span>Price :</span> High To Low </option>
+              </select>
+              <select>
+                <option>12 Items Per Page</option>
+                <option>24 Items Per Page</option>
+                <option>48 Items Per Page</option>
+                <option>All Items</option>
+              </select>
+              <div class="filter__style">
+                <button class="icon-th active"></button>
+                <button class="icon-th-list"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="product-page">
+        <div class="container">
+
+          <div class="product-page__inner">
+
+            <aside class="product-page__aside">
+
+              <div class="filter-category" id="filter-category">
+                <div class="aside__title">Categories<span id="arrow-category" class="lnr lnr-chevron-down filter-arrow"
+                    data-type="arrow"></span></div>
+                <div class="aside__item-list">
+                  <ul class="category__list">
+                    <li class="list1"><a href="#">Wordpress</a><span>35</span></li>
+                    <li class="list1"><a href="#">Landing Page</a><span>45</span></li>
+                    <li class="list1"><a href="#">Psd Template</a><span>13</span></li>
+                    <li class="list1"><a href="#">Plugins</a><span>08</span></li>
+                    <li class="list1"><a href="#">HTML Template</a><span>34</span></li>
+                    <li class="list1"><a href="#">Components</a><span>78</span></li>
+                    <li class="list1"><a href="#">Joomla Template</a><span>26</span></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter-filter" id="filter-filter">
+                <div class="aside__title">Filter Products<span id="arrow-filter"
+                    class="lnr lnr-chevron-down filter-arrow" data-type="arrow"></span></div>
+                <div class="aside__item-list">
+                  <ul class="filter__list">
+                    <li class="list2"><a href="#">Trending Products</a></li>
+                    <li class="list2"><a href="#">Popular Products</a></li>
+                    <li class="list2"><a href="#">New Products</a></li>
+                    <li class="list2"><a href="#">Best Seller</a></li>
+                    <li class="list2"><a href="#">Best Rating</a></li>
+                    <li class="list2"><a href="#">Low Price</a></li>
+                    <li class="list2"><a href="#">High Price</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="filter-price" id="filter-price">
+                <div class="aside__title">Pricing Range<span id="arrow-price" class="lnr lnr-chevron-down filter-arrow"
+                    data-type="arrow"></span></div>
+                <div class="filter__inner">
+
+                  <form>
+                    <input type="text" class="range__line" name="my_range" value="" />
+                    <button type="submit" class="range-btn">Search Update</button>
+                  </form>
+
+                </div>
+              </div>
+
+            </aside>
+
+            <div class="product-page__content">
+              <div class="content_inner">
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Valley
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Artcorner
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Lab
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+                
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Valley
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Artcorner
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Lab
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Valley
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Artcorner
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Lab
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Valley
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Artcorner
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+                <div class="category-product__grid">
+                  <a href="#" class="product__img"></a>
+                  <div class="category-product__inner">
+                    <div class="product-info">
+
+                      <div class="product-info__inner">
+                        <div class="product-title">Finance and Consulting Business Theme</div>
+                        <div class="product-description">Nunc placerat mi id nisi inter dum mollis. Praesent phare...
+                        </div>
+                        <div class="product-tech__list"><span class="icon-wordpress"></span>Wordpress</div>
+                      </div>
+
+                      <div class="product-info__inner">
+                        <div class="product-author">
+                          <a class="author-info" href="#">
+                            <img class="author-img" src="images/Ellipse 6.png" alt="Ellipse">
+                            <span class="author-name">
+                              Theme-Lab
+                            </span>
+                          </a>
+                        </div>
+
+                        <div class="info-inner">
+                          <div class="product-likes"><span class="lnr lnr-heart"></span>90</div>
+                          <div class="product-coments"><span class="lnr lnr-bubble"></span>90</div>
+                          <div class="stars">
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star"></span>
+                            <span class="icon-star-half-empty"></span><span class="nomber-stars">(34)</span>
+                          </div>
+                          <div class="product-buyes__grid"><span class="lnr lnr-cart"></span>427</div>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                  <div class="product-info underline">
+                    <div class="product-price">$18</div>
+                    <div class="product-tech__grid"><span class="icon-wordpress"></span>Wordpress</div>
+                    <div class="product-buyes__list"><span class="lnr lnr-cart"></span>427</div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div class="pages">
+                <a href="#" class="prew-page"><span class="lnr lnr-arrow-left"></span></a>
+                <a href="#" class="nomber-page current">1</a>
+                <a href="#" class="nomber-page">...</a>
+                <a href="#" class="nomber-page">8</a>
+                <a href="#" class="next-page"><span class="lnr lnr-arrow-right"></span></a>
+              </div>
+
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__inner">
+          <div class="about">
+            <div class="logo">
+              <a href="#"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  width="40px" height="40px">
+                  <image x="0px" y="0px" width="40px" height="40px"
+                    xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAACgAAAAoCAQAAAAm93DmAAAABGdBTUEAALGPC/xhBQAAACBjSFJNAAB6JgAAgIQAAPoAAACA6AAAdTAAAOpgAAA6mAAAF3CculE8AAAAAmJLR0QA/4ePzL8AAAAHdElNRQflAwMQAidUUoE2AAACLUlEQVRIx72Wz0tUURiGn5nrRAs31SqEFmKUGQVOSRmBG5dBuzLMqE371m2DINoZQhJSDVPULGtr1B8QLoIkHY2aO840lSRlKY1vi1Tm3B/n3NtA711933m/557vHM69B6FujcvXkiZ1WPzDc0h3VZOvO+oRqEvz2lJNx1Pjjsnfrl/QPjSpVjU0mAo3qE9G/X1UlakvGkqMO6XPgeoyWlZQVZ1I2OyHUO0cWlJYvvJO3NEInPQ2GijVNWDF5WPqYoFSXSdjcQOhlU8AlBZ1JBLXp7nYGitQWlBfCNdrwTmBkq9+A9evitXvBEp+y/bk9dHhTgCUyptn/KC12Rjgt0jbO+3RLs1Gjq2awCym3jBCg6D2M800B0L5Old5H8gFZrgoNKx1Z2uS9FvDIvBxCLVc126hC2o6cRsaFerRL3vLTTygyDma2CTOUwC8oC8bYQUoMcKGBTjKkxa3Fbilp1yMHRujGDcUD4QilyIbv8LD+CIbEB5wmXUjs8oYU7YSOxAesWLEFdvskgD34gX8ne0BPTIBf8Ze4AKKlHIBU+u/A72Aw7GCbmCTnUa8o11gjVkjbrDWHnCNW0Y8Hjg5qYFQ4AZfAVjmJvdc9g4nEK5T4gzwnNduc0do36L2cYaZBC/ebDnlLoYmlDPiXJaKkfjB91TAlcDhzGaZMBIFfqYCVnlmxK9QThPb/6zH6kx9ae9uue3MqysjgLMM4fGSUsoV/KternEa8YLblP8Aj2eKg7km7T8AAAAASUVORK5CYII=" />
+                </svg></a>
+              <a class="logo__text" href="#">Mart<span>Place</span></a>
+            </div>
+            <p class="text">Nunc placerat mi id nisi interdum they mollis. Praesent pharetra, justo ut scel erisque the
+              mattis, leo quam.</p>
+            <a href="tel:+67898752235" class="phone">Phone: +6789-875-2235</a>
+            <a href="mailto:support@aazztech.com" class="mail">support@aazztech.com</a>
+            <a href="#" class="map">202 New Hampshire Avenue
+              Northwest #100, New York-2573</a>
+          </div>
+
+          <div class="company">
+            <h3 class="title">Our Company</h3>
+            <a href="#">About Us</a>
+            <a href="#">How It Work</a>
+            <a href="#">Affiliates</a>
+            <a href="#">Testimonials</a>
+            <a href="#">Contact Us</a>
+            <a href="#">Copyright Notice</a>
+            <a href="#">Blog</a>
+          </div>
+
+          <div class="help">
+            <h3 class="title">Our Company</h3>
+            <a href="#">Support Forum</a>
+            <a href="#">Terms & Conditions</a>
+            <a href="#">Support Policy</a>
+            <a href="#">Refund Policy</a>
+            <a href="#">FAQs</a>
+            <a href="#">Buyers Faq</a>
+            <a href="#">Sellers Faq</a>
+          </div>
+
+          <div class="newsletter">
+            <h3 class="title">Newsletter</h3>
+            <p class="text">Subscribe to get the latest news, update and offer information. Don't worry, we won't send
+              spam!</p>
+            <div class="form">
+              <input type="text" placeholder="Enter email">
+              <button type="submit">Submit</button>
+            </div>
+
+            <a class="facebook" href="#"><span class="icon-facebook facebook"></span></a>
+            <a class="twitter" href="#"><span class="icon-twitter twitter"></span></a>
+            <a class="google" href="#"><span class="icon-google1 google"></span></a>
+            <a class="pinterest" href="#"><span class="icon-pinterest1 pinterest"></span></a>
+            <a class="linkedin" href="#"><span class="icon-linkedin linkedin"></span></a>
+            <a class="dribbble" href="#"><span class="icon-dribbble dribbble"></span></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="container">
+          <div class="footer__bottom-inner">
+            ©2017 <a href="#">MartPlace</a>. All rights reserved. Created by <a href="#">AazzTech</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="js/libs.min.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
